@@ -1,0 +1,454 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+
+/* unvisited link */
+a:link {
+ color: #400096;
+}
+
+/* visited link */
+a:visited {
+ color: #400096;
+}
+
+/* mouse over link */
+a:hover {
+ color: purple;
+}
+
+/* selected link */
+a:active {
+ color: blue;
+}
+
+
+
+
+
+
+
+.pc-top-bar {
+
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 4000;
+
+}
+
+.pc-body-holder {
+  padding: 40px;
+  width: 75%;
+  margin: auto;
+}
+
+.pc-top-left {
+  float: left;
+  padding: 13px 0 10px 25px;
+  height: 50px;
+}
+
+.pc-top-right {
+  float: right;
+  padding: 25px 29px 0 0px;
+  font-size: 18px;
+  height: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  letter-spacing: .4px;
+}
+
+.pc-logo-head {
+  font-size: 30px;
+  font-family: 'Kalam', cursive;
+  color: #cc8449;
+  font-weight: bold;
+  line-height: 54px;
+}
+
+.pc-text-element {
+  margin: 0 0 0px 0;
+}
+
+.pc-ep-sdbr {
+    width: 190px;
+    float: left;
+}
+
+.pc-ep-sdbr img {
+    border: 2px solid #000;
+}
+
+
+
+
+.newpart {
+    width: 340px;
+    float: left;
+}
+
+.newpart img {
+    border: 0px solid #000;
+}
+
+
+
+
+
+
+
+
+
+.pc-ep-title-head {
+  font-family: 'Love Ya Like A Sister', cursive;
+  letter-spacing: 1px;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 28px 0;
+  
+}
+
+
+.head-big {
+  font-size: 33px;
+  margin: 30px 0 30px 0;
+  
+}
+
+
+.pc-poppins-reg-pgraph {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+
+.pc-ep-pgraph {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  margin: 0 0 0 200px;
+  padding: 60px 0 0 0;
+}
+
+
+.pc-ep-pgraph-new {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  margin: 0 0 0 335px;
+  padding: 0px 0 0 0;
+}
+
+
+
+.pc-ep-art {
+  float: left;
+  height: 140px;
+  width: 140px;
+  border: 2px solid #000;
+  margin: 0 30px 30px 0;
+
+}
+
+.pc-ep-art img {
+  width: 100%;
+
+}
+
+.clear {
+  clear: both;
+}
+
+
+.pc-footer {
+  background: #400096;
+  width: 100%;
+  height: 190px;
+}
+
+.pc-header {
+  background: purple;
+  width: 100%;
+  height: 200px;
+  background-image: url(graphics/ptc-photo-head2.jpg);
+
+}
+
+.pc-header-wt {
+  background: #fff;
+  width: 100%;
+  height: 40px;
+}
+
+.pc-about-art {
+  float: right;
+  width: 260px;
+  margin: 24px 0 30px 40px;
+}
+
+.pc-about-art img {
+  width: 100%;
+}
+
+
+.pc-about-holder {
+  margin: auto;
+}
+
+
+.pc-episodes-holder {
+  margin: auto;
+}
+
+.pc-about-h1 {
+  font-family: 'Love Ya Like A Sister', cursive;
+  letter-spacing: 1px;
+  font-size: 40px;
+  font-weight: normal;
+  margin: 0px;
+}
+
+
+.pc-logo-short {
+  display: none;
+}
+
+.pc-follow {
+  color: #fff;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 19px;
+  letter-spacing: 2px;
+  width: 70%;
+  padding: 37px 0 0 0;
+  text-align: right;
+  margin: auto;
+}
+
+.pc-poppins {
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+
+.yt-css-btn {
+  border: 2px #400096 solid;
+  width: 209px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0px 5px 5px 14px;
+  display: block;
+  margin: 10px 0 0 0;
+}
+
+
+.yt-css-btn img {
+  margin: 10px 0 0 0;
+}
+
+
+.yt-css-txt {
+      float: left;
+      margin: 11px 17px 0 0px;
+}
+
+.pc-sngle-ep {
+  margin: 0 0 100px 0;
+}
+
+.pc-top-right-shrt {
+  float: right;
+  padding: 25px 29px 0 0px;
+  height: 50px;
+  display: none;
+}
+
+.pc-smaller-txt {
+  font-size: 16px;
+}
+
+
+
+
+@media only screen and (max-width: 820px) {
+
+
+    .pc-about-art {
+		float: none;
+		width: 260px;
+		margin: 5px auto 30px auto;
+	}
+	
+	.pc-body-lft {
+		margin: 0 !important;
+	}
+
+
+  }
+
+
+
+
+
+@media only screen and (max-width: 760px) {
+
+  .pc-top-left {
+      float: left;
+      padding: 13px 0 10px 25px;
+      height: 50px;
+    }
+
+    .pc-top-right {
+      float: right;
+      padding: 25px 29px 0 0px;
+      height: 50px;
+      display: none !important;
+    }
+
+    .pc-top-right-shrt {
+      float: right;
+      padding: 25px 17px 0 0px;
+      height: 50px;
+      display: block !important;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .pc-logo-head {
+      display: none;
+    }
+
+
+    .pc-logo-short {
+      font-size: 30px;
+      font-family: 'Kalam', cursive;
+      color: #cc8449;
+      display: block !important;
+    }
+
+
+
+    .pc-about-art {
+      float: none !important;
+      margin: 40px auto 40px auto !important;
+    }
+
+
+    .pc-body-holder {
+        padding: 0px 0px 0 0px !important;
+        width: 85% !important;
+    }
+
+
+  }
+
+
+
+@media only screen and (max-width: 600px) {
+
+
+  .pc-body-holder {
+      padding: 10px 0 0 0 !important;
+      width: 100% !important;
+  }
+
+
+  .pc-episodes-holder {
+    padding: 0 19px !important;
+    width: none !important;
+  }
+
+  .pc-about-holder {
+    padding: 0 19px !important;
+    width: none !important;
+  }
+
+.pc-ep-pgraph {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      padding: 30px 0 5px 0 !important;
+      float: left !important;
+      margin: 0px !important;
+  }
+
+  .pc-ep-pgraph-new {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 17px;
+        padding: 7px 0 5px 0 !important;
+        float: left !important;
+        margin: 0px !important;
+    }
+
+.pc-header-wt {
+  height: 5px !important;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+.yt-icons {
+  margin: 20px 0 0 0;
+  padding: 0px;
+}
+
+.yt-icons li {
+    float: left;
+    display: block;
+    margin: 0 35px 20px 0;
+    }
+
+.yt-listen {
+    line-height: 32px;
+    font-family: 'Neucha', cursive;
+    font-size: 23px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #400096;
+}
+
+
+#yt-icn-youtube {
+    width: 115px;
+    height: 27px;
+    background-image: url(icn/icn-youtube-27.png);
+    border: 0px solid red;
+}
+
+#yt-icn-soundcloud {
+    width: 53px;
+    height: 30px;
+    background-image: url(icn/icn-soundcloud.png);
+    border: 0px solid red;
+}
+
+
+#yt-holder li a {
+    margin: 0px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.wht-spc {
+  color: #fff;
+  font-size: 24px;
+}
