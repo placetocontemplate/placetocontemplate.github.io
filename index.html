@@ -140,6 +140,17 @@
 		width: 100%;
 		height: 100%;
 	}
+	
+	#circ-grad {
+		position: absolute;
+		width: 100%;
+		height: 210px;
+		background-image: linear-gradient(var(--bg) 17%,rgba(138, 157, 146, 0));
+		-webkit-background-image: linear-gradient(var(--bg) 17%,rgba(138, 157, 146, 0));
+		top: 0px;
+		z-index: 2;
+	}
+	
     
 #item-a {
     grid-column-start: 1;
@@ -892,7 +903,7 @@ line-height: 29px;
 	</div>
 	Let's go!
 	</div>
-	<div style="position:absolute;width:100%;height:210px;background-image: linear-gradient(var(--bg) 17%,rgba(255,0,0,0));top:0px;z-index:2;"></div>
+	<div id="circ-grad"></div>
 	<div class="lft-col-bgimg"></div>
 	</div>
 
