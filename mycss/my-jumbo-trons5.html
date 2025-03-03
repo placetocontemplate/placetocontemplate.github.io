@@ -1,0 +1,1468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Placeholder</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+<link href="css/ham-popup.css" rel="stylesheet">
+<link href="css/img-gal-css.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dosis:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Pangolin&family=Stick&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+	background: var(--bg-body);
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", serif;
+	font-size: 24px;
+}
+
+	.montserrat-medium {
+	  font-family: "Montserrat", serif;
+	  font-optical-sizing: auto;
+	  font-weight: 300;
+	  font-style: normal;
+	}
+
+:root {
+    --bgmain: #314197;
+	--bg-body: #fff;
+	--ltgray: #d9d9d9;
+	--footercolor: #fff;
+}
+
+a:link {
+color: var(--bgmain);
+}
+
+a:visited {
+color: var(--bgmain);
+}
+
+/* begin top menu */
+
+
+:root {
+    --limenubg: #fff;
+	--limenutext: #000;
+	--limenuselect: #f2f2f2;
+}
+
+#menu-holder {
+	display: grid;
+	grid-auto-flow: column;
+	max-width: 900px;
+	margin: auto;
+	padding: 20px 0 0px;
+}
+
+#menu-holder a:link {
+	color: var(--limenutext);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#menu-holder a:visited {
+	color: var(--limenutext);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#menu-holder a:active {
+	color: var(--limenutext);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#menu-holder div:last-child .third-tier {
+		margin: 0 100% 0 0 !important;
+		right: 0;
+		border-radius: 10px 0 10px 10px;
+}
+
+#menu-holder div:last-child .third-tier li:first-child a:hover {
+		border-radius: 10px 0 0 0;
+}
+
+#upper-menu {
+	display: grid;
+	grid-template-columns: 30% auto 30%;
+	align-items: center;
+	width: 80%;
+	margin: auto;
+}
+
+#tb-social-icns {
+	  display: grid;
+	  grid-auto-flow: column;
+	  gap: 10px;
+	  margin: auto;
+	  justify-content: right;
+ }
+
+.menu-col {
+	border: 0px solid red;
+	text-align: center;
+	position: relative;
+	font-size: 1em;
+}
+
+.menu-col a {
+	padding: 10px;
+	display: block;
+}
+
+.menu-col:hover .sec-tier {
+	display: block;
+}
+
+.sec-tier {
+	display: none;
+	background: var(--limenubg);
+	width: 94%;
+	left: 3%;
+	position: absolute;
+	border-radius: 0 0 10px 10px;
+	padding: 10px 0 0 0;
+	margin: auto;
+	list-style-type: none;
+	box-shadow: 1px 4px 6px -4px rgba(0, 0, 0, .2);
+	font-size: .9em;
+}
+
+.sec-tier a:link {
+	font-weight: normal !important;
+}
+
+.sec-tier a:hover {
+	background: var(--limenuselect);
+	/* font-weight: bold !important; */
+}
+
+.sec-tier li:last-child a:hover {
+	border-radius: 0 0 10px 10px;
+}
+
+.tier-li {
+	position: relative;
+}
+
+.third-tier {
+	position: absolute;
+	margin: 0 0 0 100% !important;
+	width: 100%;
+	display: none;
+	background: var(--limenubg);
+	top: 0;
+	list-style-type: none;
+	padding: 0;
+	border-radius: 0px 10px 10px 10px;
+	box-shadow: 1px 4px 6px -4px rgba(0, 0, 0, .2);
+}
+
+.tier-li:hover .third-tier {
+	display: block;
+}
+
+.third-tier li:first-child a:hover {
+	border-radius: 0 10px 0 0;
+}
+
+/* end top menu */
+
+/* begin cards */
+    
+	
+    .card {
+        transition: all .2s ease-in-out; 
+        cursor: pointer;
+        position: relative;
+    }
+    
+    .card:hover{
+        transform: scale(1.045); 
+        box-shadow: 2px 2px 10px var(--bgmain);
+    }
+
+
+    
+    @media only screen and (max-width: 600px) {
+                
+          #cardcontainer {
+              display: grid;
+              grid-template-columns: 1fr !important;
+          }
+		  
+		  #blog-post {
+			padding: 40px 0px 0 !important;
+		  }
+		  
+		  #blog-flt-img {
+			float: none !important;
+			margin: 0px 0 30px !important;
+		  }
+}
+
+#cardcontainer {
+    display: grid;
+    padding: 40px 40px 45px 40px;
+    min-height: 350px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1600px;
+    margin: auto;
+    align-items: start;
+}
+    
+
+    
+    .card {
+        background: var(--bgmain);
+        border-radius: 15px;
+        overflow: hidden;
+
+    }
+    
+    @media only screen and (max-width: 1400px) {
+
+        
+        #cardcontainer {
+
+      grid-template-columns: repeat(3, 1fr);
+
+}
+        
+}
+
+    #card-hold {
+        width: 100%;
+        position: relative;
+        color: #fff;
+        text-shadow: 2px 2px #00000091;
+        margin: 200px 0 0 0;
+        padding: 0px;
+    }
+    
+
+    
+    #card-text {
+        z-index: 200;
+        position: relative;
+        padding: 20px;
+    }
+    
+    #card-text h2 {
+        margin: 0 0 15px 0;
+    }
+    
+    #card-text p {
+        margin: 0 0 1px 0;
+		font-size: .9em;
+    }
+    
+    #card-text-bg {
+        background: #0000003d;
+        position: absolute;
+        z-index: 100;
+        height: 100%;
+        width: 100%;
+        top: 0;
+    }
+    
+    #card-img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    #card-img img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .card:link {
+		text-decoration: none;
+	}
+
+		/* end cards */
+    
+    
+	
+		/* begin blog */
+	
+	
+    #blog-post {
+        min-height: 500px;
+        padding: 40px 60px 0;
+        max-width: 1160px;
+        margin: auto;
+    }
+    
+    
+    #blog-post h1 {
+        font-size: 2em;
+        margin: 30px auto 12px;
+    }
+
+    #blog-post p {
+	  margin: 0 auto 30px;
+	  line-height: 38px;
+	  color: #555;
+	  font-size: .9em;
+	  font-weight: 350;
+    }
+    
+    .byline {
+        font-family: courier;
+        font-size: .8em;
+    }
+    
+    .dateline {
+        margin: 0 !important;
+        font-size: 1.3em;
+    }
+	
+	#blog-heading {
+		margin: 30px auto 0;
+		max-width: 1260px;
+		padding: 20px 0;    
+    }
+    
+    #blog-heading h1 {
+		font-size: 55px;
+		font-family: "Tomorrow", serif;
+		font-weight: 400;
+		font-style: normal;
+        line-height: 45px;
+    }
+    
+    #blog-text {
+
+    }
+    
+    #blog-flt-img {
+        float: left;
+        margin: 10px 60px 40px -40px;
+    }
+    
+    #blog-hr {
+        margin: 42px 0 15px;
+        border-bottom: none;
+        opacity: .3;
+		display: none;
+    }
+	
+	.blog-tags {
+		border-top: 1px solid;
+		padding: 9px 0 0 0;
+		margin: 50px 0 100px 20px;
+	}
+	
+	.a-tag {
+        border: 1px solid #000;
+        border-radius: 15px;
+        display: inline-block;
+        padding: 10px;
+        margin: 0 2px 5px 0;
+        font-size: .7em;
+    }
+    
+	#section-grad {
+        height: 16px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.07) 30%, rgba(0,0,0,0) 100%);
+    }
+	
+		
+		/* end blog */
+
+
+#ts-top-bar {
+	background: white;
+	padding: 20px 20px 22px;
+	z-index: 400;
+	position: relative;
+}
+
+
+
+#ts-menu {
+	text-align: right;
+	font-size: 19px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#tb-logo {
+	font-size: 20px;
+	text-align: center;
+}
+
+#tb-logo h2 {
+	margin: 0 0 0 0px;
+	color: var(--bgmain);
+	line-height: 52px;
+}
+
+
+
+#top-bar {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 0px;
+    grid-template-areas: "tb-leftcol tb-gallery";
+}
+
+#tb-leftcol {
+	color: #fff;
+	background-color: var(--bgmain);
+	grid-area: tb-leftcol;
+	position: relative;
+	overflow: hidden;
+}
+
+#tb-gallery {
+	background: var(--bgmain);
+	min-height: 250px;
+	grid-area: tb-gallery;
+}
+
+#tb-leftcol h1 {
+	margin: 0 0 24px 0;
+	font-size: 2.5em;
+	opacity: .95;
+	font-weight: 500;
+	text-shadow: 4px 3px #0000004f;
+	line-height: 65px;
+}
+
+#tb-leftcol p {
+	font-weight: 400;
+		opacity: .85;
+}
+
+#tb-leftcol-img {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 top: 0;
+	 z-index: 100;
+	 background: url(roof.png);
+	 background-size: cover;
+}
+
+#tb-leftcol-img img {
+	 width: 120%;
+}
+
+#tb-leftcol-bg {
+	 position: absolute;
+	 background: var(--bgmain);
+	 opacity: .8;
+	 width: 100%;
+	 height: 100%;
+	 top: 0;
+	 z-index: 200;
+}
+
+.leftcol-tag {
+	font-size: .8em !important;
+}
+
+#leftcol-passage {
+	margin: 40px 0 60px;
+	line-height: 42px;
+	font-size: 1.2em;
+}
+
+#tb-leftcol-inner {
+	position: relative;
+	z-index: 300;
+	padding: 60px 100px 62px;
+}
+
+
+.stroke-button {
+	color: #fff;
+	display: inline-block;
+	padding: 8px 15px;
+	border: 2px solid #fff;
+	font-size: 20px;
+	background-color: transparent;
+    cursor: pointer;
+}
+
+a.stroke-button {
+	color: #fff;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.box-link {
+	background: #fff;
+	padding: 6px;
+	font-size: .9em;
+	font-weight: 700 !important;
+}
+
+
+
+#ts-menu ul {
+	margin: 0;
+}
+
+#mnsec-container {
+	margin: 0 20px;
+}
+
+#mnsec-top-bar {
+	max-width: 1260px;
+	margin: 0px auto 55px;
+}
+
+ul.mnsec-bread {
+  padding: 10px 5px;
+  margin: 0;
+  list-style: none;
+}
+
+ul.mnsec-bread li {
+  display: inline;
+  font-size: 20px;
+}
+
+ul.mnsec-bread li+li:before {
+  padding: 5px;
+  color: black;
+  content: "/\00a0";
+}
+
+
+#ts-footer {
+	background: #8a8a8a;
+	color: var(--footercolor);
+	font-size: 16px;
+}
+
+#ts-footer a:link {
+	text-decoration: none;
+	color: var(--footercolor);
+	font-weight: normal;
+}
+
+#ts-footer a:visited {
+	text-decoration: none;
+	color: var(--footercolor);
+	font-weight: normal;
+}
+
+#ts-footer a:hover {
+	text-decoration: underline;
+}
+
+#ts-footer-inner {
+	max-width: 1400px;
+	margin: 100px auto 0;
+	grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+	display: grid;
+	gap: 30px;
+	padding: 32px 20px 58px 33px;
+}
+
+#ts-footer-inner ul {
+	padding: 0;
+	margin: 18px 0 0 0;
+	list-style-type: none;
+}
+
+#ts-footer-inner ul li {
+	padding: 4px;
+}
+
+.ts-footer-head {
+	font-weight: bold;
+	border-bottom: 1px solid var(--footercolor);
+	padding: 0 0 5px 0;
+	display: inline-block;
+}
+
+#ts-hamclick {
+	display: none;
+	width: 50px;
+	height: 50px;
+	background: gray;
+	position: fixed;
+	z-index: 1400;
+	top: 0;
+	left: 0;
+}
+
+#ft-social-icns {
+	display: grid;
+	grid-auto-columns: repeat(0, 1fr);
+	grid-auto-flow: column;
+	gap: 10px;
+	justify-content: start;
+}
+
+
+.ft-grid-icn {
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	transition: transform .2s; /* Animation */
+}
+
+
+
+.ft-grid-icn:hover {
+	transform: scale(1.3);
+}
+
+
+
+#hamburger-click {
+        width: 35px;
+        height: 35px;
+        background-color: var(--bgmain);
+        cursor: pointer;
+        position: fixed;
+        top: 0;
+        text-align: center;
+        padding: 8px;
+		color: #fff;
+    }
+    
+    .hide-ham {
+        display: grid !important;
+        animation: fadeOut 1000ms forwards;
+    }
+	
+	
+	/* start search button */
+    
+    #search-btn {
+        display: grid;
+        grid-template-columns: auto min-content;
+        text-transform: uppercase;
+        font-weight: 600;
+		font-size: 18px;
+}
+    #search-btn:hover {
+        color: var(--bgmain);
+        cursor: pointer;
+    }
+    
+    #icn-magnify {
+        margin: 0 0px 0 1px;
+        min-width: 1px;
+        height: 22px;
+    }
+    
+    #search-outer {
+        display: grid;
+        grid-template-columns: min-content auto;
+        align-items: center;
+		height: 33px;
+    }
+    
+    #search-inner {
+        width: 0%;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: auto min-content;
+        border-bottom: 2px solid var(--bgmain);
+    }
+  
+    
+    #search-inner input {
+        border: 0;
+        padding: 4px;
+		display: block;
+		outline: 0;
+    }
+
+    
+    .search-open {
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+    animation-name: searchOpen;
+    }
+    
+    .search-close {
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+    animation-name: searchClose;
+    }
+	
+	#srch-hold-mobile {
+		display: none;
+	}
+	
+	#srch-hold {
+		display: block;
+	}
+	
+	#search-btn-close {
+		display: none;
+		height: 24px;
+		font-size: 16px;
+		line-height: 26px;
+	}
+	
+	#search-btn-close-m {
+		display: none;
+		height: 24px;
+		font-size: 16px;
+		line-height: 26px;
+	}
+	 
+        @keyframes searchOpen {
+        0% {
+            width: 0%;
+        }    
+        100% {
+            width: 100%;
+            }
+        }
+    
+        @keyframes searchClose {
+        0% {
+            width: 100%;
+			opacity: 1;
+        }    
+        100% {
+            width: 0%;
+			opacity: 0;
+            }
+        }
+
+/* end search button */
+	
+	
+    
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }    
+        to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }    
+        to {
+                opacity: 0;visibility: hidden;
+            }
+        }
+
+@media only screen and (max-width:650px) {
+
+		#ts-footer-inner {
+
+		grid-template-columns: 1fr 1fr;
+
+}
+
+
+}
+
+
+@media only screen and (max-width:800px) {
+
+        
+#top-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-evenly;
+    grid-template-areas: "tb-gallery"
+        "tb-leftcol";
+}
+
+#tb-logo {
+	display: none;
+}
+
+	#srch-hold-mobile {
+		display: block;
+	}
+	
+	#srch-hold {
+		display: none;
+	}
+
+#tb-icons {
+	margin: 0 0 0 20px;
+}
+
+#upper-menu {
+    grid-template-columns: 1fr 1fr;
+}
+
+#tb-leftcol-inner {
+	padding: 60px 34px 62px !important;
+}
+
+}
+
+@media only screen and (max-width:1200px) {
+
+#ts-menu {
+	display: none;
+}
+
+#ts-hamclick {
+	display: block;
+}
+
+	.show-ham {
+        display: grid !important;
+        animation: fadeIn 200ms forwards;
+    }
+
+
+
+}
+
+@media only screen and (max-width:1300px) {
+
+        
+#ts-menu {
+    font-size: 15px;
+}
+
+#ts-footer {
+	font-size: 14px;
+}
+
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div id="ts-hamclick">
+	<div id="hamburger-click" onclick="myHamburger()">
+	<div id="ham-lines" style="display:block">
+	<svg class="w-[35px] h-[35px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" viewBox="0 0 24 24">
+	  <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+	</svg>
+
+
+	</div>
+	<div id="ham-close" style="display:none">
+	<svg class="w-[35px] h-[35px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" viewBox="0 0 24 24">
+	  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/>
+	</svg>    
+	</div>
+	</div>
+</div>
+
+<div id="ch-container">
+
+<div id="ch-topicons">
+
+		<div id="tb-social-icns">
+		<div class="grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/></svg></div>
+		<div class="grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"/></svg></div>
+		<div class="grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/></svg></div>
+		<div class="grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24"><path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/></svg></div>
+		<div class="grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/></svg></div>
+		</div>
+	
+</div>
+
+<div id="centered-ham-menu">
+
+<div id="ch-the-links">
+
+<ul id="ch-the-ul">
+<li><a href="#">blue span</a></li>
+<li><a href="#">blue span span</a></li>
+<li><a href="#">blue</a></li>
+<li><a href="#">blue span</a></li>
+<li><a href="#">blue</a></li>
+<li><a href="#">blue span</a></li>
+</ul>
+
+</div>
+</div>
+
+</div><!-- end hamburger popup -->
+
+
+
+
+
+<div id="ts-top-bar">
+
+<div id="upper-menu">
+
+<div id="tb-search">
+
+<div id="search-outer">
+    <div id="search-btn" onclick="mySearch()">
+        <div id="srch-hold-mobile"><div id="search-btn-close-m">X</div></div>
+		<div id="srch-hold"><div id="search-btn-close">X</div><div id="search-btn-txt">Search</div></div>
+        <div id="icn-magnify"><svg id="icn-magnify-svg" style="width:20px;" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/>
+            </svg>
+        </div></div>
+<div id="search-inner">
+    <div id="srch-form-hold"><form><input style="width:100%"></input></form></div>
+<div><svg id="btn-magnify-svg" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg></div>
+</div>
+</div>  
+
+</div>
+
+<div id="tb-logo">
+<h2>TestSiteLogo</h2>
+</div>
+
+<div id="tb-icons">
+		<div id="tb-social-icns">
+		<div class="grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/></svg></div>
+		<div class="grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"/></svg></div>
+		<div class="grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/></svg></div>
+		<div class="grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24"><path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/></svg></div>
+		<div class="grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/></svg></div>
+		</div>
+</div>
+
+</div>
+
+
+<div id="ts-menu">
+
+<div id="menu-holder">
+
+
+
+<div class="menu-col">
+<a href="#">Menu Item</a>
+
+<ul class="sec-tier">
+<li><a href="#">a longer one a longer one a longer one </a></li>
+<li><a href="#">Two</a></li>
+
+<li class="tier-li"><a href="#">Three</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Four</a></li>
+<li><a href="#">Five</a></li>
+
+<li class="tier-li"><a href="#">Six</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Seven</a></li>
+</ul>
+</div>
+
+
+
+
+<div class="menu-col">
+<a href="#">Placeholder</a>
+
+<ul class="sec-tier">
+<li><a href="#">a longer one a longer one a longer one </a></li>
+<li><a href="#">Two</a></li>
+
+<li class="tier-li"><a href="#">Three</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Four</a></li>
+<li><a href="#">Five</a></li>
+
+<li class="tier-li"><a href="#">Six</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Seven</a></li>
+</ul>
+</div>
+
+
+
+
+
+<div class="menu-col">
+<a href="#">Menu Item</a>
+
+<ul class="sec-tier">
+<li><a href="#">a longer one a longer one a longer one </a></li>
+<li><a href="#">Two</a></li>
+
+<li class="tier-li"><a href="#">Three</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Four</a></li>
+<li><a href="#">Five</a></li>
+
+<li class="tier-li"><a href="#">Six</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Seven</a></li>
+</ul>
+</div>
+
+
+
+<div class="menu-col">
+<a href="#">Slightly Longer</a>
+
+<ul class="sec-tier">
+<li><a href="#">a longer one a longer one a longer one </a></li>
+<li><a href="#">Two</a></li>
+
+<li class="tier-li"><a href="#">Three</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Four</a></li>
+<li><a href="#">Five</a></li>
+
+<li class="tier-li"><a href="#">Six</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Seven</a></li>
+</ul>
+</div>
+
+
+
+
+<div class="menu-col">
+<a href="#">Menu</a>
+
+<ul class="sec-tier">
+<li><a href="#">a longer one a longer one a longer one </a></li>
+<li><a href="#">Two</a></li>
+
+<li class="tier-li"><a href="#">Three</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Four</a></li>
+<li><a href="#">Five</a></li>
+
+<li class="tier-li"><a href="#">Six</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Seven</a></li>
+</ul>
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="top-bar">
+
+
+<div id="tb-leftcol" class="montserrat-medium">
+
+<div id="tb-leftcol-inner">
+<p class="leftcol-tag"><a class="box-link" href="#">Blog Posts</a></p>
+<h1>Because space...</h1>
+<div id="leftcol-passage">
+<p>is the place to be. And you'll find it, here on this web site. And you'll find it, here on this web site. And you'll find it, here on this web site.</p>
+</div>
+<p><a href="#" class="stroke-button">Read more&nbsp;→</a></p>
+</div>
+
+<div id="tb-leftcol-bg"></div>
+<div id="tb-leftcol-img"></div>
+
+</div>
+
+<div id="tb-gallery">
+<div id="gal-hold">    
+
+
+<div id="number-hold">
+</div>
+    
+<div id="number-hold2">
+</div>
+
+<div id="arrow-buttons">
+<div id="gal-prevbutton" class="arrowbuttons" onclick="imgcarPrev()">❰</div><div id="pausebutton" class="arrowbuttons" onclick="imgcarPause()">
+<div id="pauseholder"><div style="margin:-1px 0 0 0">⏸︎</div></div>
+</div><div id="gal-nextbutton" class="arrowbuttons" onclick="imgcarNext()">❱</div>
+</div>
+
+</div>  
+</div>
+
+</div>
+
+
+<div id="cardblock">  
+    
+	<div id="cardcontainer">
+
+	<a href="#" class="card">
+		<div id="card-hold">
+		<div id="card-text">
+		<h2>Text</h2>
+		<p>Several sentences for card. Add another sentence. Add another sentence.</p>
+		</div>
+			<div id="card-text-bg"></div>
+		</div>
+		<div id="card-img">
+		<img src="graphics/1.JPG">
+		</div>
+	</a>  
+		
+		
+	<a href="#" class="card">
+		<div id="card-hold">
+		<div id="card-text">
+		<h2>Text</h2>
+		<p>Several sentences for card. Add another sentence. Add another sentence.</p>
+		</div>
+			<div id="card-text-bg"></div>
+		</div>
+		<div id="card-img">
+		<img src="graphics/2.png">
+		</div>
+	</a> 
+		
+		
+	<a href="#" class="card">
+		<div id="card-hold">
+		<div id="card-text">
+		<h2>Text</h2>
+		<p>Several sentences for card. Add another sentence. Add another sentence.</p>
+		</div>
+			<div id="card-text-bg"></div>
+		</div>
+		<div id="card-img">
+		<img src="graphics/3.png">
+		</div>
+	</a> 
+
+
+
+	<a href="#" class="card">
+		<div id="card-hold">
+		<div id="card-text">
+		<h2>Text</h2>
+		<p>Several sentences for card. Add another sentence. Add another sentence.</p>
+		</div>
+			<div id="card-text-bg"></div>
+		</div>
+		<div id="card-img">
+		<img src="graphics/4.png">
+		</div>
+	</a>  
+	   
+	</div>
+
+</div>
+
+<div id="section-grad"></div>
+
+<div id="mnsec-container">
+
+<div id="mnsec-top-bar">
+ <ul class="mnsec-bread">
+  <li><a href="#">Home</a></li>
+  <li>Blog Posts</li>
+</ul> 
+</div>
+
+<div id="blog-heading">
+
+<img src="graphics/1.jpg" style="max-width:500px;width:100%;border:3px solid var(--ltgray);">
+<h1><a href="#">Short Blog</a></h1>
+    <p class="dateline">January 21, 2025</p>
+    <p class="byline">Posted in <a href="#blog">Blog</a> by <a href="#">BlogBot</a></p>
+</div>
+    
+<div id="blog-post">
+
+<div id="blog-text">
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum eget turpis quis tristique. Maecenas ornare purus massa. In porta vehicula nisl vel volutpat. Proin bibendum nunc at quam porttitor aliquet. Sed sed nunc lectus. Mauris nisl leo, aliquet in purus vel, fringilla vehicula orci. Nulla molestie turpis et semper euismod. Nullam facilisis orci ac risus viverra, sed hendrerit mauris ornare. Nullam sit amet nisi vel lectus egestas varius eu quis nisi.</p>
+<img src="graphics/2.png" width="350" id="blog-flt-img">
+<p>Suspendisse potenti. Proin vestibulum, orci non pulvinar finibus, arcu risus bibendum dui, sagittis finibus est elit eu libero. Mauris feugiat sem nec nisi pretium, nec pharetra est auctor. Nam nec posuere ligula. Vivamus risus eros, ornare vitae lacinia quis, accumsan ut magna. Duis pulvinar, mi a malesuada sagittis, arcu sem aliquet quam, eget bibendum risus velit vel mauris. Quisque semper odio et libero facilisis, et volutpat urna dignissim. Mauris metus leo, accumsan et orci sed, fermentum interdum eros. Proin vitae semper metus. Sed eu convallis est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lectus tortor, viverra eu venenatis vel, eleifend at erat. Aenean ipsum est, porta pretium erat sit amet, viverra pulvinar sem. Aliquam euismod orci at neque molestie rhoncus. Fusce augue dui, feugiat vitae nibh vel, egestas sagittis leo.</p>
+
+<p>Etiam mauris nulla, consequat sit amet consequat a, imperdiet in nulla. Suspendisse malesuada at lacus in ullamcorper. Sed pellentesque justo arcu, id ultricies lacus laoreet ultricies. Nam iaculis condimentum ipsum, vitae posuere magna ultricies id. Fusce bibendum nisi non mi commodo, non ultricies sapien rhoncus. Nullam tortor risus, aliquet sit amet cursus sit amet, posuere nec quam. Quisque ut dolor ligula. Phasellus vitae placerat lectus, sed tincidunt ligula. Morbi non pulvinar enim. Curabitur quis gravida ipsum.</p>
+
+    <hr id="blog-hr" /> 
+<div class="blog-tags">
+    <a href="#" class="a-tag">regular</a>
+    <a href="#" class="a-tag">longer tag</a>
+    <a href="#" class="a-tag">short</a>
+    <a href="#" class="a-tag">regular</a>
+    <a href="#" class="a-tag">longer tag</a>
+    <a href="#" class="a-tag">short</a>           
+</div>   
+</div>
+</div>    
+    
+
+    
+<div id="blog-heading">
+<img src="graphics/5.png" style=" height: 320px; object-fit: contain; width: 100%; background: var(--ltgray);">
+<h1><a href="#">Blog Post with exceptionally long, whole entire sentence as the title</a></h1>
+    <p class="dateline">January 21, 2025</p>
+    <p class="byline">Posted in <a href="#blog">Blog</a> by <a href="#">BlogBot</a></p>
+</div>
+    
+<div id="blog-post">
+
+<div id="blog-text">
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum eget turpis quis tristique. Maecenas ornare purus massa. In porta vehicula nisl vel volutpat. Proin bibendum nunc at quam porttitor aliquet. Sed sed nunc lectus. Mauris nisl leo, aliquet in purus vel, fringilla vehicula orci. Nulla molestie turpis et semper euismod. Nullam facilisis orci ac risus viverra, sed hendrerit mauris ornare. Nullam sit amet nisi vel lectus egestas varius eu quis nisi.</p>
+<img src="graphics/2.png" width="350" id="blog-flt-img">
+<p>Suspendisse potenti. Proin vestibulum, orci non pulvinar finibus, arcu risus bibendum dui, sagittis finibus est elit eu libero. Mauris feugiat sem nec nisi pretium, nec pharetra est auctor. Nam nec posuere ligula. Vivamus risus eros, ornare vitae lacinia quis, accumsan ut magna. Duis pulvinar, mi a malesuada sagittis, arcu sem aliquet quam, eget bibendum risus velit vel mauris. Quisque semper odio et libero facilisis, et volutpat urna dignissim. Mauris metus leo, accumsan et orci sed, fermentum interdum eros. Proin vitae semper metus. Sed eu convallis est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lectus tortor, viverra eu venenatis vel, eleifend at erat. Aenean ipsum est, porta pretium erat sit amet, viverra pulvinar sem. Aliquam euismod orci at neque molestie rhoncus. Fusce augue dui, feugiat vitae nibh vel, egestas sagittis leo.</p>
+
+<p>Etiam mauris nulla, consequat sit amet consequat a, imperdiet in nulla. Suspendisse malesuada at lacus in ullamcorper. Sed pellentesque justo arcu, id ultricies lacus laoreet ultricies. Nam iaculis condimentum ipsum, vitae posuere magna ultricies id. Fusce bibendum nisi non mi commodo, non ultricies sapien rhoncus. Nullam tortor risus, aliquet sit amet cursus sit amet, posuere nec quam. Quisque ut dolor ligula. Phasellus vitae placerat lectus, sed tincidunt ligula. Morbi non pulvinar enim. Curabitur quis gravida ipsum.</p>
+
+
+<hr id="blog-hr" /> 
+<div class="blog-tags">
+    <a href="#" class="a-tag">regular</a>
+    <a href="#" class="a-tag">longer tag</a>
+    <a href="#" class="a-tag">short</a>
+    <a href="#" class="a-tag">regular</a>
+    <a href="#" class="a-tag">longer tag</a>
+    <a href="#" class="a-tag">short</a>           
+</div>
+</div>
+    
+</div>  
+</div>
+
+
+<div id="ts-footer">
+
+<div id="ts-footer-inner">
+	<div>
+	<h1>TestSiteLogo</h1>
+	
+		<div id="ft-social-icns">
+		<div class="ft-grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/></svg></div>
+		<div class="ft-grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"/></svg></div>
+		<div class="ft-grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/></svg></div>
+		<div class="ft-grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24"><path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/></svg></div>
+		<div class="ft-grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/></svg></div>
+		</div>
+	
+	</div>
+	<div>
+	<div class="ts-footer-head">List #1</div>
+	<ul>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	<li><a href="#">Test Bottom Link</a></li>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	</ul>
+	</div>
+	<div>
+	<div class="ts-footer-head">List #2</div>
+		<ul>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	<li><a href="#">Test Bottom Link</a></li>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	</ul>
+	</div>
+	<div>
+	<div class="ts-footer-head">List #3</div>
+		<ul>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	<li><a href="#">Test Bottom Link</a></li>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	</ul>
+	</div>
+	<div>
+		<div class="ts-footer-head">List #4</div>
+		<ul>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	<li><a href="#">Test Bottom Link</a></li>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	</ul>
+	</div>
+</div>
+
+</div>
+
+<script type="text/javascript" src="js/img-gal.js"></script>
+
+</body>
+<script>
+
+let hamToggle = false;
+var ham = document.getElementById("ch-container");
+    
+function myHamburger(){
+    
+if (hamToggle === false) {    
+            
+            ham.classList.add("show-ham");
+            ham.classList.remove("hide-ham");
+            document.getElementById("ham-lines").style.display = "none";
+            document.getElementById("ham-close").style.display = "block";
+            hamToggle = true;
+            
+    } else {
+
+        ham.classList.add("hide-ham");
+        ham.classList.remove("show-ham");
+        document.getElementById("ham-lines").style.display = "block";
+        document.getElementById("ham-close").style.display = "none";
+        hamToggle = false;
+    };
+    
+};    
+    
+</script>
+<script>
+
+let searchToggle = false;
+var search = document.getElementById("search-inner");
+
+    
+function mySearch(){
+    
+if (searchToggle === false) {    
+            search.classList.remove("search-close");
+            search.classList.add("search-open");
+            document.getElementById("icn-magnify-svg").style.display = "none";
+			document.getElementById("btn-magnify-svg").style.display = "block";
+			document.getElementById("search-btn-close").style.display = "block";
+			document.getElementById("search-btn-close-m").style.display = "block";
+			document.getElementById("search-btn-txt").style.display = "none";
+
+            searchToggle = true;
+            
+    } else {
+
+        search.classList.remove("search-open");
+        search.classList.add("search-close");
+        document.getElementById("icn-magnify-svg").style.display = "block";
+		document.getElementById("btn-magnify-svg").style.display = "none";
+		document.getElementById("search-btn-close-m").style.display = "none";
+		document.getElementById("search-btn-close").style.display = "none";
+		document.getElementById("search-btn-txt").style.display = "block";
+		
+        searchToggle = false;
+    };
+    
+};    
+    
+</script>
+</html>
