@@ -1,0 +1,78 @@
+#ch-the-ul a:link {
+	color: #424242;
+	text-decoration: none;
+	font-weight: 450;
+}
+#ch-the-ul a:visited {
+	color: #424242;
+}
+#ch-the-ul a:hover {
+	color: var(--bgmain);
+	text-decoration: underline;
+}
+#ch-the-ul a:active {
+	color: #424242;
+}
+
+#ch-container {
+	grid-template-rows: 20% 80%; 	
+	height: 100%;
+	background: #fffffff5;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 1300;
+	display: none;
+}
+
+.bebas-font {
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#centered-ham-menu {
+
+}
+
+#ch-topicons {
+	display: grid;
+
+}
+
+#ch-the-links {
+	margin: auto;
+	font-size: 35px;
+	text-align: center;
+}
+
+#ch-the-ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#ch-the-ul li {
+	padding: 12px;
+	text-transform: uppercase;
+}
+
+#ch-social-icns {
+	display: grid;
+	grid-auto-columns: repeat(0, 1fr);
+	grid-auto-flow: column;
+	gap: 10px;
+	margin: auto;
+    justify-content: center; 
+}
+
+.grid-icn {
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	transition: transform .2s; /* Animation */
+}
+
+.grid-icn:hover {
+	transform: scale(1.3);
+}

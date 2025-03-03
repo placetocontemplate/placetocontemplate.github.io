@@ -1,0 +1,111 @@
+#arrow-buttons {
+		margin: auto;
+		position: absolute;
+		left: 9px;
+		bottom: 9px;
+		background-color: rgba(123, 123, 123, 0.6);
+		z-index: 100;
+		border-radius: 5px;
+		height: 30px;
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+    
+    #gal-prevbutton {
+        float: left;
+    }
+	
+	.arrowbuttons {
+        text-align: center;
+        font-size: 30px;
+        color: #fff;
+		z-index: 100;
+		line-height: 29px;
+		height: 30px;
+	}
+	
+	.arrowbuttons:hover {
+		background: teal;
+		cursor: pointer;
+	}
+    
+    #gal-nextbutton {
+        float: right;
+    }
+	
+	#pauseholder {
+		width: 35px;
+	}
+	
+	#gal-hold {
+		width: 100%;
+        height: 100%;
+        margin: auto;
+		position: relative;
+    }
+    
+    #number-hold {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border: 0px solid black;
+        margin: 0 0 20px 0;
+        position: absolute;
+        z-index: 10;
+    }
+    
+    #number-hold2 {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border: 0px solid black;
+        margin: 0 0 20px 0;
+        position: absolute;
+		left: 0;
+    }
+
+	#galfade img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	
+	#galfade2 img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+     
+
+    @keyframes galFadeIn {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+    
+    @keyframes galFadeOut {
+    0% {
+    opacity: 1;
+    }
+    100% {
+    opacity: 0;
+    }
+}
+    
+
+#galfade {
+	width: 100%;
+    height: 100%;
+    animation: .5s galFadeOut;
+    animation-fill-mode: forwards;    
+}
+    
+#galfade2 {
+	width: 100%;
+    height: 100%;
+    animation: 3s galFadeIn;
+}
