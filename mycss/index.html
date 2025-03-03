@@ -1,0 +1,47 @@
+<html>
+<title>
+Folder Navigation
+</title>
+<style>
+
+body {
+	background: #00003e;
+}
+
+#tableIndex {
+	max-width: 800px;
+	width: 100%;
+	margin: auto;
+}
+
+#tableIndex td {
+	padding: 8px;
+	background: silver;
+	border: 5px solid transparent;
+}
+</style>
+<body>
+<br/>
+<table border="0" id="tableIndex">
+
+</table>
+
+</body>
+
+
+</html>
+<script>
+const urls = ["my-jumbo-trons5.html"];
+
+const descs = ["A modern, scalable, front-end using CSS grid, CSS animations, and Javascript"];
+
+urls.forEach((element, index) => {
+
+const element2 = descs[index];
+
+document.getElementById('tableIndex').innerHTML += '<tr><td><a href="' + element + '">' + element + '</a></td><td>' + element2 + '</td></tr>';
+
+});
+
+
+</script>
