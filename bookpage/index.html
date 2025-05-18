@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Book Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">   
+<link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
+<style>
+    
+    body {
+		font-family: "Roboto", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 350;
+		font-style: normal;
+		font-size: 22px;
+		background: #f2f2f2;
+    }
+	
+	:root {
+		--accent: #ae3cae;
+		--button: #151515;
+		--button-hov: #464646;
+	}
+	
+	button {
+		padding: 10px 14px;
+		background: var(--button);
+		border-radius: 11px;
+		color: #fff;
+		cursor: pointer;
+		border: 0;
+		font-size: 17px;
+	}
+	
+	button:hover {
+		background: var(--button-hov);
+	}
+
+.custom-h1 {
+	font-size: 70px;
+	margin: 0 auto 30px;
+	text-align: center;
+	font-family: "Roboto", sans-serif;
+	font-optical-sizing: auto;
+	font-variation-settings: "wdth" 100;
+	font-weight: 100;
+	font-style: italic;
+	position: relative;
+}
+
+.custom-h2 {
+	font-family: "Roboto", sans-serif;
+	font-optical-sizing: auto;
+	font-variation-settings: "wdth" 100;
+	font-size: 35px;
+	font-style: italic;
+	font-weight: 250;
+}
+
+.custom-h1::after {
+	  background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+	  content: "";
+	  top: 45%;
+	  position: absolute;
+	  width: 100%;
+	  height: 18%;
+	  left: 0;
+	  z-index: -1;
+	  opacity: .5;
+}
+
+#outer-cont {
+	max-width: 1200px;
+	margin: auto;
+}    
+    
+#pic {
+    max-width: 500px;
+	grid-area: the-image;
+}
+
+#pic img {
+    width: 100%;
+	border-radius: 20px;
+}
+    
+    #soc-med {
+		display: flex;
+		flex-direction: row;
+		justify-content: left;
+		gap: 8px;
+		margin: 0 0 50px 0;
+    }
+    
+	.soc-med-circ {
+		width: 26px;
+		height: 26px;
+		background: var(--button);
+		border-radius: 50%;
+		padding: 8px;
+		cursor: pointer;
+	}
+	
+    #top-cont {
+        max-width: 1200px;
+        margin: auto;
+        position: relative;
+		display: grid;
+		justify-content: space-between;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "the-image right-col";
+    }
+	
+	
+	#rt-ct-col {
+		grid-area: right-col;
+		justify-self: end;
+		min-width: 300px;
+	}
+
+
+	
+	#book-col {
+		max-width: 800px;
+		line-height: 37px;
+	}
+
+	
+	@media only screen and (max-width:900px) {
+	
+		.custom-h1 {
+			font-size: 44px !important;
+			font-weight: 200;
+			line-height: 37px;
+			margin-bottom: 18px;
+			border-bottom: #dbd799 double 5px;
+			padding: 4px 0 9px 0;
+		}
+		
+		.custom-h1::after {
+			display: none;
+		}
+		
+	}
+	
+	@media only screen and (max-width:750px) {
+		
+		#top-cont {
+		grid-template-columns: 1fr;
+		grid-template-areas: "the-image"
+		"right-col";
+		}
+		
+		#rt-ct-col {
+		justify-self: left;
+		}
+		
+	}
+	
+</style>
+<style>
+#cart-col {
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 1.7em;
+}
+
+#main-price {
+	color: #4fb04f;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+#crt-main {
+	border-top: 1px solid black;
+	padding-top: 15px;
+}
+
+#pp-button {
+	color: #fff;
+	padding: 9px;
+	width: 100%;
+	border-radius: 15px;
+	background: #151515;
+	margin: 20px 0 0 0;
+	font-weight: bold;
+	font-size: 20px;
+	cursor: pointer;
+	text-align: center;
+	border: 0;
+}
+
+#pp-button:hover {
+	background: #464646;
+}
+
+#tb-output {
+	width: 100%;
+}
+
+.algn-rt {
+	margin: 0 0 8px 0;
+	text-align: right;
+}
+
+#btn-addit {
+	margin: 10px 0 0 0;
+}
+
+#the-cart {
+	margin: 14px 0 0 0;
+}
+
+</style>
+</head>
+<body>
+
+<h1 class="custom-h1">After you say what's true...</h1>
+
+<div id="outer-cont">
+
+<div id="top-cont">
+    
+
+
+<div id="pic">
+<img src="graphics/ays.jpg">
+</div>
+
+
+
+<div id="rt-ct-col">
+
+<div id="soc-med">
+<a href="https://www.goodreads.com/book/show/32938939-after-you-say-what-s-true" class="soc-med-circ">
+<svg fill="#ffffff" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>Goodreads icon</title><path d="M19.525 15.977V.49h-2.059v2.906h-.064c-.211-.455-.481-.891-.842-1.307-.36-.412-.767-.777-1.232-1.094-.466-.314-.962-.561-1.519-.736C13.256.09 12.669 0 12.038 0c-1.21 0-2.3.225-3.246.67-.947.447-1.743 1.057-2.385 1.83-.642.773-1.133 1.676-1.47 2.711-.336 1.037-.506 2.129-.506 3.283 0 1.199.141 2.326.425 3.382.286 1.057.737 1.976 1.368 2.762.631.78 1.412 1.397 2.375 1.833.961.436 2.119.661 3.471.661 1.248 0 2.33-.315 3.262-.946s1.638-1.473 2.119-2.525h.061v2.284c0 2.044-.421 3.607-1.264 4.705-.84 1.081-2.224 1.638-4.146 1.638-.572 0-1.128-.061-1.669-.181-.542-.12-1.036-.315-1.487-.57-.437-.271-.827-.601-1.143-1.038-.316-.435-.526-.961-.632-1.593H5.064c.067.887.315 1.654.737 2.3.424.646.961 1.172 1.602 1.593.641.406 1.367.706 2.172.902.811.194 1.639.3 2.494.3 1.383 0 2.541-.195 3.486-.555.947-.376 1.714-.902 2.301-1.608.601-.708 1.021-1.549 1.293-2.556.27-1.007.42-2.134.42-3.367l-.044.062zm-7.484-.557c-.955 0-1.784-.189-2.479-.571-.697-.38-1.277-.882-1.732-1.503-.467-.621-.797-1.332-1.022-2.139s-.332-1.633-.332-2.484c0-.871.105-1.725.301-2.563.21-.84.54-1.587.992-2.24.451-.652 1.037-1.182 1.728-1.584s1.533-.605 2.51-.605 1.803.209 2.495.621c.676.415 1.247.959 1.683 1.634.436.677.751 1.429.947 2.255.195.826.285 1.656.285 2.482 0 .852-.12 1.678-.345 2.484-.226.807-.572 1.518-1.038 2.139-.465.621-1.021 1.123-1.698 1.503-.676.382-1.458.571-2.359.571h.064z"></path></g></svg>
+</a>
+<a class="soc-med-circ">
+<svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="" height="" fill="none" viewBox="0 0 24 24">
+  <path stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"/>
+</svg>
+</a>
+</div>
+
+
+<div id="cart-col">
+<h2 class="custom-h2">Order a copy:</h2>
+
+<span id="main-price">Price</span> plus s&h<br/>
+
+<button id="btn-addit" style="margin:21px 0 28px 0" onclick="FirstButton()">ADD TO MY CART</button>
+
+<div id="the-cart" style="display:none">
+<div id="crt-added">
+
+<table border="0"><tr><td><strong>Quantity:</strong>&nbsp;</td>
+<td>
+<button onclick="myFunctionMinus()">–</button>
+    </td><td>
+<div id="amt-box">1</div>
+    </td><td>
+<button onclick="myFunctionPlus()">+</button>
+    </td></tr></table>
+
+<p><strong>Choose Shipping:</strong></p>
+<input type="radio" id="option1" name="shipping" value="value1">
+<label for="option1">U.S.</label>
+
+<input type="radio" id="option2" name="shipping" value="value2">
+<label for="option2">International</label><br>
+
+<br/><button id="btn-update" onclick="checkRadioButtons()">ADD TO MY CART</button>
+
+</div>
+
+</div>
+
+<div id="crt-main" style="display:none">
+<div id="crt-subtotal">Subtotal</div>
+
+</div>
+<br/><img src="graphics/powered-paypal.png" width="135">
+
+
+</div><!-- end cart col -->
+</div>
+
+</div>
+
+
+<div id="book-col">
+
+<p>In 8 poems, I stroll and ponder my urban backdrop but feel empty.  To make sense of my malaise, I revisit my past.  I remember old rooms, toys, and clothes, and explore the memories attached to them.  As I flesh out scenes from my past, I make sense of my present.</p>
+
+</div>
+
+</div>
+
+    <div style="border-style: double none none none; height: 5px; margin: 20px 0 0px 0;"></div><br/>
+</body>
+</html>
+
+<script>
+
+const curr = new Intl.NumberFormat("en-us", {
+    currency: "USD",
+    style: "currency",
+})
+
+let product = "After you say what's true..."
+
+let count = 1;    
+    
+let bookcost = 9.00;
+ 
+let us = 3.50;
+    
+let int = 6.00;
+
+shipping = us;
+
+let maxbooks = 3;
+
+var typeofshipvar;
+
+
+const cartmain = document.getElementById("crt-main");
+const amt = document.getElementById("amt-box");
+const subtotal = document.getElementById("crt-subtotal");
+
+const cartcont = document.getElementById("cart-col");
+const mainprice = document.getElementById("main-price");
+const updatebtn = document.getElementById("btn-update");
+const addbtn = document.getElementById("btn-addit");
+const thecart = document.getElementById("the-cart");
+
+mainprice.innerHTML = `${curr.format(bookcost)}`;
+
+
+
+function FirstButton() {
+
+addbtn.style.display = "none";
+thecart.style.display = "block";
+
+};
+
+
+
+// Radio buttons:
+
+const radios = document.querySelectorAll('input[type="radio"][name="shipping"]');
+
+
+
+document.addEventListener('DOMContentLoaded', function() { // Clears radio buttons on whole page refresh
+    var radioButtons = cartcont.querySelectorAll('input[type="radio"]');
+    for (var i = 0; i < radioButtons.length; i++) {
+        radioButtons[i].checked = false;
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() { // Puts in the default values on page load
+	updateCart();
+});
+
+
+
+radios.forEach(radio => {
+
+
+	radio.addEventListener('change', function() {
+        // Code to execute when the radio button is selected
+		
+				
+		if (this.value == 'value2') {
+		
+			shipping = int;
+			typeofshipvar = "International Shipping";
+			
+			if (count < 1) {
+				subtotal.innerHTML = `Choose a quantity<br/>`;
+				
+			};
+			
+		} else {
+
+			shipping = us;
+			typeofshipvar = "U.S. Shipping";
+			
+			if (count < 1) {
+			subtotal.innerHTML = `Choose a quantity<br/>`;
+			
+			};
+		}
+		
+		updateCart();
+		
+      
+	});
+		  
+    });
+
+
+
+
+function myFunctionPlus() {
+
+	
+    if (count == maxbooks) {
+		alert("The maximum is " + maxbooks + " copies. Thanks for understanding!");
+		count = maxbooks;
+	} else {
+		count = count + 1;
+
+	};
+	
+	updateCart();
+	
+};
+
+
+function myFunctionMinus() {
+  
+	  
+	count = count - 1;
+	
+	if (count < 1) {
+	
+		count = 0;
+		
+	}
+	
+	updateCart();
+
+};
+
+
+function checkRadioButtons() {
+
+  let isAnySelected = false;
+
+  for (let i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+      isAnySelected = true;
+      break; // Exit the loop if at least one is selected
+    }
+  }
+
+  if (!isAnySelected) {
+    alert("Please select a shipping type.");
+  }
+  
+	if (isAnySelected == true) {
+		cartmain.style.display = "block";
+		updatebtn.style.display = "none";
+	};
+	
+}  
+
+
+
+function updateCart() {
+
+    if (count == 0) {
+	
+	amt.innerHTML = `${count}`;
+    subtotal.innerHTML = `Choose a quantity.<br/>`;
+	
+	} else {
+
+    amt.innerHTML = `${count}`;
+    subtotal.innerHTML = `
+	<table id="tb-output"><tr><td>Subtotal: ${count} copies x ${curr.format(bookcost)}</td><td align="right">${curr.format(count * bookcost)}</td></tr>
+	<tr><td>${typeofshipvar}:</td><td align="right">${curr.format(shipping)}</td></tr>
+    <tr><td><strong>Total:</strong></td><td align="right"><strong>${curr.format((count * bookcost) + shipping)}</strong></td></tr></table>
+	
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+  <input type="hidden" name="business" value="dantarnowski@gmail.com">
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="add" value="1">
+  <input type="hidden" name="quantity" value="${count}">  
+  <input type="hidden" name="item_name" value="${product} - ${typeofshipvar}">
+  <input type="hidden" name="amount" value="${bookcost}">  
+  <input type="hidden" name="shipping" value="${shipping}">
+  <input type="hidden" name="currency_code" value="USD">
+  <!-- Display the payment button. -->
+  <input type="submit" id="pp-button" value="Pay with PayPal" name="submit">
+</form>`;
+	
+    };
+
+}
+
+
+</script>
