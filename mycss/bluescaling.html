@@ -1,0 +1,1644 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Blue Scaling Layout</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+<link href="css/ham-popup.css" rel="stylesheet">
+<link href="css/img-gal-css.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dosis:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Pangolin&family=Stick&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+	background: var(--bg-body);
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", serif;
+	font-size: 24px;
+}
+
+	.montserrat-medium {
+	  font-family: "Montserrat", serif;
+	  font-optical-sizing: auto;
+	  font-weight: 300;
+	  font-style: normal;
+	}
+
+:root {
+    --bgmain: #314197;
+	--bg-body: #fff;
+	--ltgray: #d9d9d9;
+	--footercolor: #fff;
+}
+
+a:link {
+color: var(--bgmain);
+}
+
+a:visited {
+color: var(--bgmain);
+}
+
+/* begin search and social icons menu */
+
+
+#tm-top {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0 15px 0 42px;
+        margin: 20px auto 0;
+    }
+    
+    #tm-col1 {
+        align-content: center;
+    }
+    
+    #tm-col2 {
+        align-content: center;
+		text-align: center;
+    }
+	
+	#tm-col2 h2 {
+		margin: 0;
+		font-size: 1.7em;
+		font-weight: 600;
+		color: var(--bgmain);
+		line-height: 35px;
+	}
+    
+    #tm-col3 {
+        align-content: center;
+    }
+    
+    #tm-col3-inner {
+        display: grid;
+        grid-auto-flow: column;
+        position: relative;
+		height: 55px;
+    }
+    
+    #tm-soc-icns {
+        /* background: orange; */			
+		height: 55px;
+		overflow: hidden;
+		position: absolute;
+		right: 15px;
+		align-content: center;
+    }
+    
+    .tm-soc-icns-anim {
+        opacity: 0 !important;
+        margin-top: 55px !important;
+    }
+     
+#rg-srch-hold {
+	width: 0px;
+	display: grid;
+	grid-template-columns: auto min-content;
+	transition: opacity 400ms, width 400ms;
+	opacity: 0;
+    border-bottom: 3px solid var(--bgmain);
+}
+    
+#rg-srch-hold form {
+	margin: 0;
+}
+
+#rg-srch-hold input {
+	border: 0;
+	outline: 0;
+	font-size: 17px;
+	width: 100%;
+}
+    
+    #rg-srch-x {
+        display: none;
+    }
+    
+    #rg-srch-clk {
+        cursor: pointer;
+        align-content: center;
+    }
+    
+    .rg-tog-show {
+        display: block !important;
+    }
+    
+    .rg-tog-hide {
+        display: none !important;
+    }
+
+    .rg-srch-trans {
+        width: 100% !important;
+        opacity: 1 !important;
+    }
+    
+    #rg-srch-outer {
+        display: grid;
+        grid-template-columns: min-content auto;
+		padding-right: 40px;
+    }
+	
+	#rg-srch-mag {
+		display: grid;
+		grid-template-columns: auto min-content;
+		font-size: 20px;
+		font-weight: 450;
+	}
+	
+	.swp-grid-icn {
+	  width: 24px;
+	  height: 24px;
+	  cursor: pointer;
+	  transition: transform .15s;
+	}
+
+	.swp-grid-icn:hover {
+		transform: scale(1.25);
+	}
+
+	#tm-in-social-icns {
+		  max-width: 220px;
+		  display: flex;
+		  flex-wrap: wrap;
+		  gap: 2px;
+		  margin-top: 0;
+		  margin-left: auto;
+		  margin-right: auto;
+		  justify-content: left;
+		  opacity: 1;
+		  transition: opacity 500ms, margin-top 500ms;
+	}
+    
+    #sp-srch-outer {
+        display: grid;
+        grid-template-columns: min-content auto;
+		align-content: center;
+		padding: 0 15px 0 0;
+    }
+    
+    #sp-srch-clk {
+        cursor: pointer;
+        align-content: center;
+		width: 18px;
+    }
+    
+    #sp-srch-hold {
+		width: 0px;
+		display: grid;
+		grid-template-columns: auto min-content;
+		transition: opacity 400ms, width 400ms;
+		opacity: 0;
+		border-bottom: 3px solid var(--bgmain);
+    }
+    
+    #sp-srch-hold input {
+        width: 100%;
+		font-size: 17px;
+		border: 0;
+		outline: 0;
+    }
+    
+    .sp-srch-trans {
+        width: 100% !important;
+        opacity: 1 !important;
+    }
+    
+    #sp-srch-x {
+        display: none;
+    }
+    
+    #sp-srch-clk {
+        cursor: pointer;
+        align-content: center;
+    }
+    
+    #sp-srch-hold form {
+    margin: 0;
+    }
+
+	
+	@media only screen and (max-width:550px) {
+        
+        #tm-top {
+			padding: 0 0px 0 42px
+		}
+        
+    }
+
+    @media only screen and (max-width:950px) {
+        
+        #tm-col1 {
+            display: none;
+        }   
+        
+        #tm-col2 {
+            display: none;
+        }   
+        
+        #tm-top {
+        grid-template-columns: 1fr;
+        }
+        
+    }
+    
+    @media only screen and (min-width:950px) {
+        
+        #sp-srch-outer {
+            visibility: hidden;
+        }
+		
+		.tm-soc-icns-anim {
+			margin-top: 0 !important;
+			opacity: 1 !important;
+		}
+    
+		#tm-soc-icns {
+			display: block !important;
+		}
+	
+    }
+
+
+/* end search and social icons menu */
+
+/* begin top menu */
+
+
+:root {
+    --limenubg: #fff;
+	--limenutext: #000;
+	--limenuselect: #f2f2f2;
+}
+
+#menu-holder {
+	display: grid;
+	grid-auto-flow: column;
+	max-width: 900px;
+	margin: auto;
+	padding: 20px 0 0px;
+}
+
+#menu-holder a:link {
+	color: var(--limenutext);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#menu-holder a:visited {
+	color: var(--limenutext);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#menu-holder a:active {
+	color: var(--limenutext);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#menu-holder div:last-child .third-tier {
+		margin: 0 100% 0 0 !important;
+		right: 0;
+		border-radius: 10px 0 10px 10px;
+}
+
+#menu-holder div:last-child .third-tier li:first-child a:hover {
+		border-radius: 10px 0 0 0;
+}
+
+#tb-social-icns {
+	  display: grid;
+	  grid-auto-flow: column;
+	  gap: 10px;
+	  margin: auto;
+	  justify-content: right;
+ }
+
+.menu-col {
+	border: 0px solid red;
+	text-align: center;
+	position: relative;
+	font-size: 1em;
+}
+
+.menu-col a {
+	padding: 10px;
+	display: block;
+}
+
+.menu-col:hover .sec-tier {
+	display: block;
+}
+
+.sec-tier {
+	display: none;
+	background: var(--limenubg);
+	position: absolute;
+	border-radius: 0 0 10px 10px;
+	padding: 10px 0 0 0;
+	margin: auto;
+	list-style-type: none;
+	box-shadow: 1px 4px 6px -4px rgba(0, 0, 0, .2);
+	font-size: .9em;
+	min-width: 200px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.sec-tier a:link {
+	font-weight: normal !important;
+}
+
+.sec-tier a:hover {
+	background: var(--limenuselect);
+	/* font-weight: bold !important; */
+}
+
+.sec-tier li:last-child a:hover {
+	border-radius: 0 0 10px 10px;
+}
+
+.tier-li {
+	position: relative;
+}
+
+.third-tier {
+	position: absolute;
+	margin: 0 0 0 100% !important;
+	width: 100%;
+	display: none;
+	background: var(--limenubg);
+	top: 0;
+	list-style-type: none;
+	padding: 0;
+	border-radius: 0px 10px 10px 10px;
+	box-shadow: 1px 4px 6px -4px rgba(0, 0, 0, .2);
+}
+
+.tier-li:hover .third-tier {
+	display: block;
+}
+
+.third-tier li:first-child a:hover {
+	border-radius: 0 10px 0 0;
+}
+
+/* end top menu */
+
+/* begin cards */
+    
+	
+    .card {
+        transition: all .2s ease-in-out; 
+        cursor: pointer;
+        position: relative;
+    }
+    
+    .card:hover{
+        transform: scale(1.045); 
+        box-shadow: 2px 2px 10px var(--bgmain);
+    }
+
+
+    
+    @media only screen and (max-width: 600px) {
+                
+          #cardcontainer {
+              display: grid;
+              grid-template-columns: 1fr !important;
+          }
+		  
+		  #blog-post {
+			padding: 40px 0px 0 !important;
+		  }
+		  
+		  #blog-flt-img {
+			float: none !important;
+			margin: 0px 0 30px !important;
+			width: 100%;
+		  }
+}
+
+#cardcontainer {
+    display: grid;
+    padding: 40px 40px 45px 40px;
+    min-height: 350px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1600px;
+    margin: auto;
+    align-items: start;
+}
+    
+
+    
+    .card {
+        background: var(--bgmain);
+        border-radius: 15px;
+        overflow: hidden;
+
+    }
+    
+    @media only screen and (max-width: 1400px) {
+
+        
+        #cardcontainer {
+
+			grid-template-columns: repeat(3, 1fr);
+		}
+        
+}
+
+    #card-hold {
+        width: 100%;
+        position: relative;
+        color: #fff;
+        text-shadow: 2px 2px #00000091;
+        margin: 200px 0 0 0;
+        padding: 0px;
+    }
+    
+    #card-text {
+        z-index: 200;
+        position: relative;
+        padding: 20px;
+    }
+    
+    #card-text h2 {
+        margin: 0 0 15px 0;
+    }
+    
+    #card-text p {
+        margin: 0 0 1px 0;
+		font-size: .9em;
+    }
+    
+    #card-text-bg {
+        background: #0000003d;
+        position: absolute;
+        z-index: 100;
+        height: 100%;
+        width: 100%;
+        top: 0;
+    }
+    
+    #card-img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    #card-img img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .card:link {
+		text-decoration: none;
+	}
+
+		/* end cards */
+    
+    
+	
+		/* begin blog */
+	
+	
+    #blog-post {
+        min-height: 500px;
+        padding: 40px 60px 0;
+        max-width: 1160px;
+        margin: auto;
+    }
+    
+    
+    #blog-post h1 {
+        font-size: 2em;
+        margin: 30px auto 12px;
+    }
+
+    #blog-post p {
+	  margin: 0 auto 30px;
+	  line-height: 38px;
+	  color: #555;
+	  font-size: .9em;
+	  font-weight: 350;
+    }
+    
+    .byline {
+        font-family: courier;
+        font-size: .8em;
+    }
+    
+    .dateline {
+        margin: 0 !important;
+        font-size: 1.3em;
+    }
+	
+	#blog-heading {
+		margin: 30px auto 0;
+		max-width: 1260px;
+		padding: 20px 0;    
+    }
+    
+    #blog-heading h1 {
+		font-size: 55px;
+		font-family: "Tomorrow", serif;
+		font-weight: 400;
+		font-style: normal;
+        line-height: 45px;
+		hyphens: auto;
+    }
+    
+    #blog-text {
+
+    }
+    
+    #blog-flt-img {
+        float: left;
+        margin: 10px 60px 40px -40px;
+    }
+    
+    #blog-hr {
+        margin: 42px 0 15px;
+        border-bottom: none;
+        opacity: .3;
+		display: none;
+    }
+	
+	.blog-tags {
+		border-top: 1px solid;
+		padding: 9px 0 0 0;
+		margin: 50px 0 100px 20px;
+	}
+	
+	.a-tag {
+        border: 1px solid #000;
+        border-radius: 15px;
+        display: inline-block;
+        padding: 10px;
+        margin: 0 2px 5px 0;
+        font-size: .7em;
+    }
+    
+	#section-grad {
+        height: 16px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.07) 30%, rgba(0,0,0,0) 100%);
+    }
+	
+		
+		/* end blog */
+
+
+#ts-top-bar {
+	background: white;
+	padding: 0px 20px 20px;
+	z-index: 400;
+	position: relative;
+}
+
+#ts-menu {
+	text-align: right;
+	font-size: 19px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#top-bar {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 0px;
+    grid-template-areas: "tb-leftcol tb-gallery";
+}
+
+#tb-leftcol {
+	color: #fff;
+	background-color: var(--bgmain);
+	grid-area: tb-leftcol;
+	position: relative;
+	overflow: hidden;
+}
+
+#tb-gallery {
+	background: var(--bgmain);
+	min-height: 250px;
+	grid-area: tb-gallery;
+}
+
+#tb-leftcol h1 {
+	margin: 0 0 24px 0;
+	font-size: 2.5em;
+	opacity: .95;
+	font-weight: 500;
+	text-shadow: 4px 3px #0000004f;
+	line-height: 65px;
+}
+
+#tb-leftcol p {
+	font-weight: 400;
+		opacity: .85;
+}
+
+#tb-leftcol-img {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 top: 0;
+	 z-index: 100;
+	 background: url(graphics/2sm.png);
+	 background-size: cover;
+}
+
+#tb-leftcol-img img {
+	 width: 120%;
+}
+
+#tb-leftcol-bg {
+	 position: absolute;
+	 background: var(--bgmain);
+	 opacity: .8;
+	 width: 100%;
+	 height: 100%;
+	 top: 0;
+	 z-index: 200;
+}
+
+.leftcol-tag {
+	font-size: .8em !important;
+}
+
+#leftcol-passage {
+	margin: 40px 0 60px;
+	line-height: 42px;
+	font-size: 1.2em;
+}
+
+#tb-leftcol-inner {
+	position: relative;
+	z-index: 300;
+	padding: 60px 100px 62px;
+}
+
+.stroke-button {
+	color: #fff;
+	display: inline-block;
+	padding: 8px 15px;
+	border: 2px solid #fff;
+	font-size: 20px;
+	background-color: transparent;
+    cursor: pointer;
+}
+
+a.stroke-button {
+	color: #fff;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.box-link {
+	background: #fff;
+	padding: 6px;
+	font-size: .9em;
+	font-weight: 700 !important;
+}
+
+#ts-menu ul {
+	margin: 0;
+}
+
+#mnsec-container {
+	margin: 0 20px;
+}
+
+#mnsec-top-bar {
+	max-width: 1260px;
+	margin: 0px auto 55px;
+}
+
+ul.mnsec-bread {
+  padding: 10px 5px;
+  margin: 0;
+  list-style: none;
+}
+
+ul.mnsec-bread li {
+  display: inline;
+  font-size: 20px;
+}
+
+ul.mnsec-bread li+li:before {
+  padding: 5px;
+  color: black;
+  content: "/\00a0";
+}
+
+#ts-footer {
+	background: #8a8a8a;
+	color: var(--footercolor);
+	font-size: 16px;
+}
+
+#ts-footer a:link {
+	text-decoration: none;
+	color: var(--footercolor);
+	font-weight: normal;
+}
+
+#ts-footer a:visited {
+	text-decoration: none;
+	color: var(--footercolor);
+	font-weight: normal;
+}
+
+#ts-footer a:hover {
+	text-decoration: underline;
+}
+
+#ts-footer-inner {
+	max-width: 1400px;
+	margin: 100px auto 0;
+	padding: 32px 20px 58px 33px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas: 
+    "logo logo footer1 footer2 footer3 footer4";
+}
+
+.foot-logo {
+  grid-area: logo;
+}
+.foot-item-a {
+  grid-area: footer1;
+}
+.foot-item-b {
+  grid-area: footer2;
+}
+.foot-item-c {
+  grid-area: footer3;
+}
+.foot-item-d {
+  grid-area: footer4;
+}
+
+#ts-footer-inner ul {
+	padding: 0;
+	margin: 18px 0 0 0;
+	list-style-type: none;
+}
+
+#ts-footer-inner ul li {
+	padding: 4px;
+}
+
+.ts-footer-head {
+	font-weight: bold;
+	border-bottom: 1px solid var(--footercolor);
+	padding: 0 0 5px 0;
+	display: inline-block;
+}
+
+#ts-hamclick {
+	display: none;
+	background: gray;
+	position: fixed;
+	z-index: 1400;
+	top: 0;
+	left: 0;
+}
+
+#ft-social-icns {
+	display: grid;
+	grid-auto-columns: repeat(0, 1fr);
+	grid-auto-flow: column;
+	gap: 10px;
+	justify-content: start;
+}
+
+.ft-grid-icn {
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	transition: transform .2s; /* Animation */
+}
+
+.ft-grid-icn:hover {
+	transform: scale(1.3);
+}
+
+
+
+#hamburger-click {
+        width: 35px;
+        height: 35px;
+        background-color: var(--bgmain);
+        cursor: pointer;
+        position: fixed;
+        top: 0;
+        text-align: center;
+		color: #fff;
+    }
+    
+    .hide-ham {
+        display: grid !important;
+        animation: fadeOut 1000ms forwards;
+    }
+	
+	
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }    
+        to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }    
+        to {
+                opacity: 0;visibility: hidden;
+            }
+        }
+
+@media only screen and (max-width:700px) {
+
+		#ts-footer-inner {
+
+		  grid-template-columns: 1fr 1fr;
+		  grid-template-areas: 
+			"logo logo"
+			"footer1 footer2" 
+			"footer3 footer4"
+
+		}
+		
+		#ch-the-links {
+			font-size: 24px;
+		}		
+
+		.ts-footer-head {
+			margin: 30px 0 0 0 !important;
+		}
+
+}
+
+
+@media only screen and (max-width:800px) {
+
+        
+#top-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-evenly;
+    grid-template-areas: "tb-gallery"
+        "tb-leftcol";
+}
+
+#tb-leftcol-inner {
+	padding: 60px 34px 62px !important;
+}
+
+
+}
+
+@media only screen and (max-width:1200px) {
+
+#ts-menu {
+	display: none;
+}
+
+#ts-hamclick {
+	display: block;
+}
+
+	.show-ham {
+        display: grid !important;
+        animation: fadeIn 200ms forwards;
+    }
+
+}
+
+@media only screen and (max-width:1300px) {
+
+        
+#ts-menu {
+    font-size: 15px;
+}
+
+#ts-footer {
+	font-size: 14px;
+}
+
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div id="ts-hamclick">
+	<div id="hamburger-click" onclick="myHamburger()">
+	<div id="ham-lines" style="display:block">
+	<svg class="w-[35px] h-[35px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" viewBox="0 0 24 24">
+	  <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+	</svg>
+
+
+	</div>
+	<div id="ham-close" style="display:none">
+	<svg class="w-[35px] h-[35px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" viewBox="0 0 24 24">
+	  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/>
+	</svg>    
+	</div>
+	</div>
+</div>
+
+<div id="tm-top">
+
+<div id="tm-col1">
+
+<div id="rg-srch-outer">
+<div id="rg-srch-clk" onclick="toggleSearchReg()">
+<div id="rg-srch-mag"><div>SEARCH</div>
+<div><svg id="btn-magnify-svg" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" style="display: block;"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"></path></svg></div>
+</div>
+<div id="rg-srch-x">X</div></div>
+<div id="rg-srch-hold">
+<div><form><input></input></form></div>
+<div>
+<svg id="btn-magnify-svg" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" style="display: block;"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"></path></svg>
+</div>
+</div>
+</div>
+    
+</div>
+    
+<div id="tm-col2">
+<h2>TestSiteLogo</h2>
+</div>
+
+<div id="tm-col3">
+<div id="tm-col3-inner"> 
+<div id="sp-srch-outer">
+<div id="sp-srch-clk" onclick="toggleSearchSpec()">
+<div id="sp-srch-mag">
+<svg id="btn-magnify-svg" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" style="display: block;"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"></path></svg>
+</div>
+<div id="sp-srch-x">X</div></div>
+<div id="sp-srch-hold">
+<form><input></input></form>
+<div>
+<svg id="btn-magnify-svg" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" style="display: block;"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"></path></svg>
+</div>
+</div>
+</div>
+
+<div id="tm-soc-icns">
+<div id="tm-in-social-icns">
+	
+		<div class="swp-grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"></path></svg></div>
+		<div class="swp-grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"></path></svg></div>
+		<div class="swp-grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"></path></svg></div>
+		<div class="swp-grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24"><path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"></path></svg></div>
+		<div class="swp-grid-icn"><svg width="100%" height="100%" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="#000000" d="m33.067 111.226 5.826 1.435a6 6 0 0 0-3.978-7.143l-1.848 5.708Zm17.548-25.068-4.728 3.694a6 6 0 0 0 8.341 1.096l-3.613-4.79Zm90.77 0-3.613 4.79a6 6 0 0 0 8.341-1.096l-4.728-3.694Zm17.548 25.068-1.848-5.708a6 6 0 0 0-3.978 7.143l5.826-1.435ZM96 174.001c18.846 0 36.138-5.722 48.855-15.259C157.573 149.203 166 135.568 166 120.001h-12c0 10.943-5.9 21.307-16.345 29.141-10.447 7.835-25.155 12.859-41.655 12.859v12Zm-70-54c0 15.567 8.427 29.202 21.145 38.741 12.717 9.537 30.01 15.259 48.855 15.259v-12c-16.5 0-31.208-5.024-41.655-12.859C43.9 141.308 38 130.944 38 120.001H26Zm1.241-10.21A42.616 42.616 0 0 0 26 120.001h12c0-2.505.306-4.956.893-7.34l-11.652-2.87ZM16 96.001c0 9.793 6.394 18.076 15.219 20.933l3.696-11.416A10.007 10.007 0 0 1 28 96.001H16Zm22-22c-12.15 0-22 9.85-22 22h12c0-5.523 4.477-10 10-10v-12Zm17.343 8.463C51.326 77.324 45.049 74 38 74v12c3.2 0 6.047 1.496 7.887 3.851l9.456-7.388ZM96 66c-18.916 0-36.268 5.764-48.998 15.367l7.226 9.58C64.682 83.063 79.438 78 96 78V66Zm48.998 15.367C132.268 71.765 114.916 66 96 66v12c16.563 0 31.318 5.062 41.772 12.947l7.226-9.58Zm1.115 8.484a9.972 9.972 0 0 1 7.887-3.85v-12c-7.05 0-13.326 3.322-17.343 8.463l9.456 7.388Zm7.887-3.85c5.523 0 10 4.477 10 10h12c0-12.15-9.85-22-22-22v12Zm10 10c0 4.438-2.895 8.215-6.915 9.517l3.696 11.416c8.825-2.857 15.219-11.14 15.219-20.933h-12Zm2 24a42.63 42.63 0 0 0-1.241-10.21l-11.652 2.87c.587 2.384.893 4.835.893 7.34h12Z"/><circle cx="68" cy="110.001" r="12" fill="#000000"/><circle cx="124" cy="110.001" r="12" fill="#000000"/><path stroke="#000000" stroke-linecap="round" stroke-width="12" d="M120 138.001s-8 6-24 6-24-6-24-6"/><circle cx="146" cy="36.001" r="12" stroke="#000000" stroke-width="12"/><path fill="#000000" fill-rule="evenodd" d="M107.177 22.118a6 6 0 0 0-7.028 4.553l-10 44a6 6 0 1 0 11.702 2.66l8.704-38.3 24.074 4.815A11.985 11.985 0 0 1 134 36c0-3.036 1.127-5.808 2.986-7.922l-29.809-5.961Z" clip-rule="evenodd"/></svg></div>
+		<div class="swp-grid-icn"><svg fill="#000000" width="100%" height="100%" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.292 5C10.536 5 7.48 8.866 7.48 13.077c0 1.955 1.039 4.392 2.707 5.168.253.118.387.064.443-.18.047-.185.273-1.089.373-1.511a.402.402 0 0 0-.095-.386c-.55-.667-.988-1.896-.988-3.041 0-2.942 2.228-5.787 6.021-5.787 3.28 0 5.571 2.23 5.571 5.426 0 3.61-1.82 6.108-4.191 6.108-1.309 0-2.291-1.081-1.978-2.413.378-1.584 1.106-3.298 1.106-4.438 0-1.026-.552-1.883-1.685-1.883-1.341 0-2.415 1.385-2.415 3.241 0 1.182.4 1.978.4 1.978s-1.323 5.593-1.563 6.634c-.413 1.765.051 4.625.094 4.876.021.134.172.18.252.066.129-.175 1.725-2.565 2.174-4.292l.828-3.171c.439.829 1.707 1.531 3.061 1.531 4.021 0 6.923-3.703 6.923-8.299C24.52 8.301 20.92 5 16.292 5z"/></svg></div>
+		<div class="swp-grid-icn"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.9992 5.95846C21.0087 6.565 20.9333 7.32649 20.8658 7.8807C20.8395 8.09686 20.8037 8.27676 20.7653 8.42453C21.6227 10.01 22 11.9174 22 14C22 16.4684 20.8127 18.501 18.9638 19.8871C17.1319 21.2605 14.6606 22 12 22C9.33939 22 6.86809 21.2605 5.0362 19.8871C3.18727 18.501 2 16.4684 2 14C2 11.9174 2.37732 10.01 3.23472 8.42452C3.19631 8.27676 3.16055 8.09685 3.13422 7.8807C3.06673 7.32649 2.99133 6.565 3.00081 5.95846C3.01149 5.27506 3.10082 4.5917 3.19988 3.91379C3.24569 3.60028 3.31843 3.30547 3.65883 3.11917C4.00655 2.92886 4.37274 2.99981 4.73398 3.1021C5.95247 3.44713 7.09487 3.93108 8.16803 4.51287C9.2995 4.17287 10.5783 4 12 4C13.4217 4 14.7005 4.17287 15.832 4.51287C16.9051 3.93108 18.0475 3.44713 19.266 3.1021C19.6273 2.99981 19.9935 2.92886 20.3412 3.11917C20.6816 3.30547 20.7543 3.60028 20.8001 3.91379C20.8992 4.5917 20.9885 5.27506 20.9992 5.95846ZM20 14C20 12.3128 19.6122 10 17.5 10C16.5478 10 15.6474 10.2502 14.7474 10.5004C13.8482 10.7502 12.9495 11 12 11C11.0505 11 10.1518 10.7502 9.25263 10.5004C8.35261 10.2502 7.45216 10 6.5 10C4.39379 10 4 12.3197 4 14C4 15.7636 4.82745 17.231 6.23588 18.2869C7.66135 19.3556 9.69005 20 12 20C14.3099 20 16.3386 19.3555 17.7641 18.2869C19.1726 17.231 20 15.7636 20 14ZM10 14.5C10 15.8807 9.32843 17 8.5 17C7.67157 17 7 15.8807 7 14.5C7 13.1193 7.67157 12 8.5 12C9.32843 12 10 13.1193 10 14.5ZM15.5 17C16.3284 17 17 15.8807 17 14.5C17 13.1193 16.3284 12 15.5 12C14.6716 12 14 13.1193 14 14.5C14 15.8807 14.6716 17 15.5 17Z" fill="#000000"/>
+</svg></div>
+  		<div class="swp-grid-icn"><svg width="90%" height="90%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 7V12C8 12.5523 7.55228 13 7 13C6.44772 13 6 12.5523 6 12V7C6.00458 5.12141 7.76059 4 9.5 4C10.6307 4 11.4437 4.34086 12 4.83532C12.5563 4.34086 13.3693 4 14.5 4C16.2387 4 17.9942 5.12063 18 6.99875V12C18 12.5523 17.5523 13 17 13C16.4477 13 16 12.5523 16 12V6.99875C15.9406 6.24143 15.1596 6 14.5 6C13.8515 6 13.0672 6.24659 13 6.99875V10C13 10.5523 12.5523 11 12 11C11.4477 11 11 10.5523 11 10V7C10.9403 6.23967 10.1531 6 9.5 6C8.85153 6 8.06716 6.24784 8 7Z" fill="#0F0F0F"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 1H8C4.07296 1 1.08597 4.02365 1 7.98924V13C1 18.1146 4.55833 23 10 23H15.48C16.8717 23 18 21.8717 18 20.48C18 19.1132 16.8655 18.0336 15.5 18C15.2181 17.9931 14.8836 17.9965 14.5149 18.0004C12.4361 18.022 9.26795 18.055 8.28321 16.2962C12.8078 17.1259 23 18.5 23 11V8C22.9065 4.03533 19.9339 1 16 1ZM3 13V7.98924C3.11577 5.11381 5.1386 3 8 3H16C18.8671 3 20.8776 5.12583 21 8V11C21 17 10.344 14.8052 7.24254 14.0299C6.62138 13.8746 6 14.3597 6 15C6 16.0843 6.27531 17.0111 6.8592 17.7553C8.53489 19.8912 11.8962 19.9238 14.5184 19.9492C14.8582 19.9525 15.1857 19.9557 15.4954 19.9633C15.7768 19.9703 16 20.1994 16 20.48C16 20.7672 15.7672 21 15.48 21H10C5.65362 21 3 17.016 3 13Z" fill="#0F0F0F"/>
+</svg></div>
+		<div style="display:flex;gap:2px;">
+		<div class="swp-grid-icn"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.9992 5.95846C21.0087 6.565 20.9333 7.32649 20.8658 7.8807C20.8395 8.09686 20.8037 8.27676 20.7653 8.42453C21.6227 10.01 22 11.9174 22 14C22 16.4684 20.8127 18.501 18.9638 19.8871C17.1319 21.2605 14.6606 22 12 22C9.33939 22 6.86809 21.2605 5.0362 19.8871C3.18727 18.501 2 16.4684 2 14C2 11.9174 2.37732 10.01 3.23472 8.42452C3.19631 8.27676 3.16055 8.09685 3.13422 7.8807C3.06673 7.32649 2.99133 6.565 3.00081 5.95846C3.01149 5.27506 3.10082 4.5917 3.19988 3.91379C3.24569 3.60028 3.31843 3.30547 3.65883 3.11917C4.00655 2.92886 4.37274 2.99981 4.73398 3.1021C5.95247 3.44713 7.09487 3.93108 8.16803 4.51287C9.2995 4.17287 10.5783 4 12 4C13.4217 4 14.7005 4.17287 15.832 4.51287C16.9051 3.93108 18.0475 3.44713 19.266 3.1021C19.6273 2.99981 19.9935 2.92886 20.3412 3.11917C20.6816 3.30547 20.7543 3.60028 20.8001 3.91379C20.8992 4.5917 20.9885 5.27506 20.9992 5.95846ZM20 14C20 12.3128 19.6122 10 17.5 10C16.5478 10 15.6474 10.2502 14.7474 10.5004C13.8482 10.7502 12.9495 11 12 11C11.0505 11 10.1518 10.7502 9.25263 10.5004C8.35261 10.2502 7.45216 10 6.5 10C4.39379 10 4 12.3197 4 14C4 15.7636 4.82745 17.231 6.23588 18.2869C7.66135 19.3556 9.69005 20 12 20C14.3099 20 16.3386 19.3555 17.7641 18.2869C19.1726 17.231 20 15.7636 20 14ZM10 14.5C10 15.8807 9.32843 17 8.5 17C7.67157 17 7 15.8807 7 14.5C7 13.1193 7.67157 12 8.5 12C9.32843 12 10 13.1193 10 14.5ZM15.5 17C16.3284 17 17 15.8807 17 14.5C17 13.1193 16.3284 12 15.5 12C14.6716 12 14 13.1193 14 14.5C14 15.8807 14.6716 17 15.5 17Z" fill="#000000"/>
+</svg></div>
+		<div class="swp-grid-icn"><svg width="90%" height="90%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 7V12C8 12.5523 7.55228 13 7 13C6.44772 13 6 12.5523 6 12V7C6.00458 5.12141 7.76059 4 9.5 4C10.6307 4 11.4437 4.34086 12 4.83532C12.5563 4.34086 13.3693 4 14.5 4C16.2387 4 17.9942 5.12063 18 6.99875V12C18 12.5523 17.5523 13 17 13C16.4477 13 16 12.5523 16 12V6.99875C15.9406 6.24143 15.1596 6 14.5 6C13.8515 6 13.0672 6.24659 13 6.99875V10C13 10.5523 12.5523 11 12 11C11.4477 11 11 10.5523 11 10V7C10.9403 6.23967 10.1531 6 9.5 6C8.85153 6 8.06716 6.24784 8 7Z" fill="#0F0F0F"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 1H8C4.07296 1 1.08597 4.02365 1 7.98924V13C1 18.1146 4.55833 23 10 23H15.48C16.8717 23 18 21.8717 18 20.48C18 19.1132 16.8655 18.0336 15.5 18C15.2181 17.9931 14.8836 17.9965 14.5149 18.0004C12.4361 18.022 9.26795 18.055 8.28321 16.2962C12.8078 17.1259 23 18.5 23 11V8C22.9065 4.03533 19.9339 1 16 1ZM3 13V7.98924C3.11577 5.11381 5.1386 3 8 3H16C18.8671 3 20.8776 5.12583 21 8V11C21 17 10.344 14.8052 7.24254 14.0299C6.62138 13.8746 6 14.3597 6 15C6 16.0843 6.27531 17.0111 6.8592 17.7553C8.53489 19.8912 11.8962 19.9238 14.5184 19.9492C14.8582 19.9525 15.1857 19.9557 15.4954 19.9633C15.7768 19.9703 16 20.1994 16 20.48C16 20.7672 15.7672 21 15.48 21H10C5.65362 21 3 17.016 3 13Z" fill="#0F0F0F"/></svg></div>
+		<div class="swp-grid-icn"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9 3C11.9 2.72386 12.1239 2.5 12.4 2.5H15.2C15.4597 2.5 15.6762 2.69883 15.6982 2.9576C15.8456 4.68994 16.601 5.69493 17.4512 6.27309C18.3233 6.86619 19.3321 7.03338 19.9778 7.00464C20.2536 6.99236 20.4872 7.20604 20.4995 7.48191C20.5118 7.75778 20.2981 7.99137 20.0222 8.00365C19.2013 8.04019 17.97 7.83529 16.8888 7.09999C15.8711 6.40784 15.0166 5.26502 14.7549 3.5H12.9V13.9666C12.9 15.6646 12.2277 16.9506 11.2484 17.6391C10.267 18.3291 9.00524 18.3869 7.9957 17.6557C6.74437 16.7493 6.5284 15.3245 7.03027 14.2013C7.46605 13.226 8.44075 12.4775 9.7 12.4544V10.1748C8.78509 10.2343 7.61007 10.4676 6.61391 11.0866C5.4598 11.8038 4.5 13.0635 4.5 15.3374C4.5 16.8087 4.89793 17.8589 5.48366 18.6091C6.07288 19.3638 6.88196 19.8527 7.76297 20.1451C8.64578 20.438 9.58405 20.5275 10.3975 20.493C11.2249 20.4579 11.865 20.2973 12.169 20.139C13.4079 19.4936 14.1093 18.8565 14.5221 18.0477C14.9437 17.2218 15.1 16.15 15.1 14.5541V9.0708C15.1 8.89826 15.189 8.7379 15.3354 8.64658C15.4818 8.55525 15.6649 8.54586 15.8199 8.62173C16.4456 8.9281 18.1979 9.59709 20.0407 9.74745C20.3159 9.76991 20.5208 10.0112 20.4983 10.2865C20.4759 10.5617 20.2346 10.7666 19.9593 10.7441C18.4542 10.6213 17.0188 10.185 16.1 9.82926V14.5541C16.1 16.1868 15.9463 17.4572 15.4128 18.5023C14.8706 19.5646 13.972 20.3273 12.631 21.0259C12.1423 21.2804 11.3361 21.4541 10.4399 21.4921C9.52965 21.5307 8.467 21.4323 7.44799 21.0942C6.42717 20.7554 5.43351 20.1698 4.69545 19.2245C3.95389 18.2748 3.5 16.9995 3.5 15.3374C3.5 12.7156 4.64021 11.1357 6.08611 10.2373C7.49667 9.36075 9.15221 9.1583 10.2 9.1583C10.4761 9.1583 10.7 9.38216 10.7 9.6583V12.9874C10.7 13.1331 10.6365 13.2714 10.5262 13.3664C10.4158 13.4614 10.2695 13.5036 10.1255 13.4819C9.06028 13.3214 8.27059 13.8767 7.94327 14.6092C7.6178 15.3376 7.74632 16.2403 8.5823 16.8458C9.21629 17.305 10.0101 17.2873 10.6732 16.8211C11.3386 16.3532 11.9 15.4019 11.9 13.9666V3Z" fill="#000000"/>
+</svg></div>
+		<div class="swp-grid-icn"><svg fill="#000000" width="100%" height="100%" viewBox="-5.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.625 5.594h15.563c1.469 0 2.625 1.156 2.625 2.625v15.563c0 0.781-0.313 1.375-0.781 1.844-0.438 0.438-1.125 0.781-1.844 0.781h-15.563c-1.469 0-2.625-1.156-2.625-2.625v-15.563c0-0.719 0.344-1.406 0.781-1.844 0.469-0.469 1.063-0.781 1.844-0.781zM7.031 14.188v5.813c0 0.781 0.063 1.344 0.219 1.719s0.469 0.781 0.875 1.125 0.906 0.656 1.5 0.844c0.563 0.188 1.25 0.281 2 0.281 0.688 0 1.281-0.063 1.844-0.219 0.563-0.125 1.219-0.375 1.938-0.688v-2.625c-0.844 0.531-1.656 0.844-2.5 0.844-0.469 0-0.906-0.156-1.25-0.375-0.281-0.156-0.5-0.344-0.594-0.625-0.094-0.25-0.156-0.875-0.156-1.844v-4.25h3.938v-2.563h-3.938v-4.219h-2.344c-0.094 0.844-0.281 1.563-0.563 2.094-0.281 0.563-0.656 1.031-1.125 1.438-0.438 0.375-0.969 0.688-1.656 0.906v2.344h1.813z"></path>
+</svg></div>
+		<div class="swp-grid-icn"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 6.5H13.5V11H12V6.5ZM17.25 6.5V11H15.75V6.5H17.25Z" fill="#000000"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 5.75L6.75 2H21V12.5L14.25 19.25H11.25L7.5 23V19.25H3V5.75ZM19.5 11.75L16.5 14.75H13.5L10.5 17.75V14.75H7.5V3.5H19.5V11.75ZM12 6.5H13.5V11H12V6.5ZM17.25 6.5V11H15.75V6.5H17.25Z" fill="#000000"/>
+</svg></div>
+		<div class="swp-grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"></path></svg></div>
+		<div class="swp-grid-icn"><svg fill="#000000" width="100%" height="100%" viewBox="-2.5 -2.5 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-quora-circle"><path d='M9.5 17a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15zm0 2a9.5 9.5 0 1 1 0-19 9.5 9.5 0 0 1 0 19z'/><path d='M14.07 12.847s-.049.718-.696.718c-.5 0-.841-.385-1.16-.884a4.417 4.417 0 0 0 1.483-3.325C13.697 6.95 11.821 5 9.507 5c-2.314 0-4.19 1.95-4.19 4.356 0 2.405 1.876 4.356 4.19 4.356.42 0 .826-.065 1.208-.184.484.775 1.098 1.472 2.06 1.472 1.958 0 2.039-2.153 2.039-2.153h-.744zm-4.563.147c-1.35 0-2.443-1.629-2.443-3.638 0-2.01 1.094-3.638 2.443-3.638 1.35 0 2.443 1.629 2.443 3.638 0 .799-.173 1.537-.466 2.138-.331-.477-.729-.883-1.297-1.013-1.009-.229-1.877.229-2.152.457l.259.539s.261-.152.91 0c.41.095.727.667 1.09 1.323a1.73 1.73 0 0 1-.787.194z'/></svg></div>
+		</div>
+
+</div>
+</div>
+
+</div></div>
+    
+</div>
+
+
+<div id="ch-container">
+<div id="ch-topicons">
+
+		<div id="tb-social-icns">
+		<div class="grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/></svg></div>
+		<div class="grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"/></svg></div>
+		<div class="grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/></svg></div>
+		<div class="grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24"><path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/></svg></div>
+		<div class="grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/></svg></div>
+		</div>
+	
+</div>
+
+<div id="centered-ham-menu">
+
+<div id="ch-the-links">
+
+<ul id="ch-the-ul">
+<li><a href="#">blue span</a></li>
+<li><a href="#">blue span span</a></li>
+<li><a href="#">blue</a></li>
+<li><a href="#">blue span</a></li>
+<li><a href="#">blue</a></li>
+<li><a href="#">blue span</a></li>
+</ul>
+
+</div>
+</div>
+
+</div><!-- end hamburger popup -->
+
+
+
+
+
+<div id="ts-top-bar">
+
+<div id="ts-menu">
+
+<div id="menu-holder">
+
+<div class="menu-col">
+<a href="#">Menu Item</a>
+
+<ul class="sec-tier">
+<li><a href="#">a longer one a longer one a longer one </a></li>
+<li><a href="#">Two</a></li>
+
+<li class="tier-li"><a href="#">Three</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Four</a></li>
+<li><a href="#">Five</a></li>
+
+<li class="tier-li"><a href="#">Six</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Seven</a></li>
+</ul>
+</div>
+
+
+
+
+<div class="menu-col">
+<a href="#">Placeholder</a>
+
+<ul class="sec-tier">
+<li><a href="#">a longer one a longer one a longer one </a></li>
+<li><a href="#">Two</a></li>
+
+<li class="tier-li"><a href="#">Three</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Four</a></li>
+<li><a href="#">Five</a></li>
+
+<li class="tier-li"><a href="#">Six</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Seven</a></li>
+</ul>
+</div>
+
+
+
+
+
+<div class="menu-col">
+<a href="#">Menu Item</a>
+
+<ul class="sec-tier">
+<li><a href="#">a longer one a longer one a longer one </a></li>
+<li><a href="#">Two</a></li>
+
+<li class="tier-li"><a href="#">Three</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Four</a></li>
+<li><a href="#">Five</a></li>
+
+<li class="tier-li"><a href="#">Six</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Seven</a></li>
+</ul>
+</div>
+
+
+
+<div class="menu-col">
+<a href="#">Slightly Longer</a>
+
+<ul class="sec-tier">
+<li><a href="#">a longer one a longer one a longer one </a></li>
+<li><a href="#">Two</a></li>
+
+<li class="tier-li"><a href="#">Three</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Four</a></li>
+<li><a href="#">Five</a></li>
+
+<li class="tier-li"><a href="#">Six</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Seven</a></li>
+</ul>
+</div>
+
+
+
+
+<div class="menu-col">
+<a href="#">Menu</a>
+
+<ul id="widthtest" class="sec-tier">
+<li><a href="#">a longer one a longer one a longer one </a></li>
+<li><a href="#">Two</a></li>
+
+<li class="tier-li"><a href="#">Three</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Four</a></li>
+<li><a href="#">Five</a></li>
+
+<li class="tier-li"><a href="#">Six</a>
+<ul class="third-tier">
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+<li><a href="#">third tier</a></li>
+</ul>
+</li>
+
+<li><a href="#">Seven</a></li>
+</ul>
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="top-bar">
+
+<div id="tb-leftcol" class="montserrat-medium">
+
+<div id="tb-leftcol-inner">
+<p class="leftcol-tag"><a class="box-link" href="#">Blog Posts</a></p>
+<h1>Spaces are meant...</h1>
+<div id="leftcol-passage">
+<p>To be explored. Spread out with full width headers. Expand your world, with web design.</p>
+</div>
+<p><a href="#" class="stroke-button">Read more&nbsp;→</a></p>
+</div>
+
+<div id="tb-leftcol-bg"></div>
+<div id="tb-leftcol-img"></div>
+
+</div>
+
+<div id="tb-gallery">
+<div id="gal-hold">    
+
+
+<div id="number-hold">
+</div>
+    
+<div id="number-hold2">
+</div>
+
+<div id="arrow-buttons">
+<div id="gal-prevbutton" class="arrowbuttons" onclick="imgcarPrev()">❰</div><div id="pausebutton" class="arrowbuttons" onclick="imgcarPause()">
+<div id="pauseholder"><div style="margin:-1px 0 0 0">⏸︎</div></div>
+</div><div id="gal-nextbutton" class="arrowbuttons" onclick="imgcarNext()">❱</div>
+</div>
+
+</div>  
+</div>
+
+</div>
+
+
+<div id="cardblock">  
+    
+	<div id="cardcontainer">
+
+	<a href="#" class="card">
+		<div id="card-hold">
+		<div id="card-text">
+		<h2>Text</h2>
+		<p>Several sentences for card. Add another sentence. Add another sentence.</p>
+		</div>
+			<div id="card-text-bg"></div>
+		</div>
+		<div id="card-img">
+		<img src="graphics/1.png">
+		</div>
+	</a>  
+		
+		
+	<a href="#" class="card">
+		<div id="card-hold">
+		<div id="card-text">
+		<h2>Text</h2>
+		<p>Several sentences for card. Add another sentence. Add another sentence.</p>
+		</div>
+			<div id="card-text-bg"></div>
+		</div>
+		<div id="card-img">
+		<img src="graphics/2sm.png">
+		</div>
+	</a> 
+		
+		
+	<a href="#" class="card">
+		<div id="card-hold">
+		<div id="card-text">
+		<h2>Text</h2>
+		<p>Several sentences for card. Add another sentence. Add another sentence.</p>
+		</div>
+			<div id="card-text-bg"></div>
+		</div>
+		<div id="card-img">
+		<img src="graphics/3sm.png">
+		</div>
+	</a> 
+
+
+
+	<a href="#" class="card">
+		<div id="card-hold">
+		<div id="card-text">
+		<h2>Text</h2>
+		<p>Several sentences for card. Add another sentence. Add another sentence.</p>
+		</div>
+			<div id="card-text-bg"></div>
+		</div>
+		<div id="card-img">
+		<img src="graphics/4sm.png">
+		</div>
+	</a>  
+	   
+	</div>
+
+</div>
+
+<div id="section-grad"></div>
+
+<div id="mnsec-container">
+
+<div id="mnsec-top-bar">
+ <ul class="mnsec-bread">
+  <li><a href="#">Home</a></li>
+  <li>Blog Posts</li>
+</ul> 
+</div>
+
+<div id="blog-heading">
+
+<img src="graphics/1.png" style="max-width:500px;width:100%;border:3px solid var(--ltgray);">
+<h1><a href="#">Short Blog</a></h1>
+    <p class="dateline">January 21, 2025</p>
+    <p class="byline">Posted in <a href="#blog">Blog</a> by <a href="#">BlogBot</a></p>
+</div>
+    
+<div id="blog-post">
+
+<div id="blog-text">
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum eget turpis quis tristique. Maecenas ornare purus massa. In porta vehicula nisl vel volutpat. Proin bibendum nunc at quam porttitor aliquet. Sed sed nunc lectus. Mauris nisl leo, aliquet in purus vel, fringilla vehicula orci. Nulla molestie turpis et semper euismod. Nullam facilisis orci ac risus viverra, sed hendrerit mauris ornare. Nullam sit amet nisi vel lectus egestas varius eu quis nisi.</p>
+<img src="graphics/2sm.png" width="350" id="blog-flt-img">
+<p>Suspendisse potenti. Proin vestibulum, orci non pulvinar finibus, arcu risus bibendum dui, sagittis finibus est elit eu libero. Mauris feugiat sem nec nisi pretium, nec pharetra est auctor. Nam nec posuere ligula. Vivamus risus eros, ornare vitae lacinia quis, accumsan ut magna. Duis pulvinar, mi a malesuada sagittis, arcu sem aliquet quam, eget bibendum risus velit vel mauris. Quisque semper odio et libero facilisis, et volutpat urna dignissim. Mauris metus leo, accumsan et orci sed, fermentum interdum eros. Proin vitae semper metus. Sed eu convallis est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lectus tortor, viverra eu venenatis vel, eleifend at erat. Aenean ipsum est, porta pretium erat sit amet, viverra pulvinar sem. Aliquam euismod orci at neque molestie rhoncus. Fusce augue dui, feugiat vitae nibh vel, egestas sagittis leo.</p>
+
+<p>Etiam mauris nulla, consequat sit amet consequat a, imperdiet in nulla. Suspendisse malesuada at lacus in ullamcorper. Sed pellentesque justo arcu, id ultricies lacus laoreet ultricies. Nam iaculis condimentum ipsum, vitae posuere magna ultricies id. Fusce bibendum nisi non mi commodo, non ultricies sapien rhoncus. Nullam tortor risus, aliquet sit amet cursus sit amet, posuere nec quam. Quisque ut dolor ligula. Phasellus vitae placerat lectus, sed tincidunt ligula. Morbi non pulvinar enim. Curabitur quis gravida ipsum.</p>
+
+    <hr id="blog-hr" /> 
+<div class="blog-tags">
+    <a href="#" class="a-tag">regular</a>
+    <a href="#" class="a-tag">longer tag</a>
+    <a href="#" class="a-tag">short</a>
+    <a href="#" class="a-tag">regular</a>
+    <a href="#" class="a-tag">longer tag</a>
+    <a href="#" class="a-tag">short</a>           
+</div>   
+</div>
+</div>    
+    
+
+    
+<div id="blog-heading">
+<img src="graphics/5sm.png" style=" height: 320px; object-fit: contain; width: 100%; background: var(--ltgray);">
+<h1><a href="#">Blog Post with exceptionally long, whole entire sentence as the title</a></h1>
+    <p class="dateline">January 21, 2025</p>
+    <p class="byline">Posted in <a href="#blog">Blog</a> by <a href="#">BlogBot</a></p>
+</div>
+    
+<div id="blog-post">
+
+<div id="blog-text">
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum eget turpis quis tristique. Maecenas ornare purus massa. In porta vehicula nisl vel volutpat. Proin bibendum nunc at quam porttitor aliquet. Sed sed nunc lectus. Mauris nisl leo, aliquet in purus vel, fringilla vehicula orci. Nulla molestie turpis et semper euismod. Nullam facilisis orci ac risus viverra, sed hendrerit mauris ornare. Nullam sit amet nisi vel lectus egestas varius eu quis nisi.</p>
+<img src="graphics/2sm.png" width="350" id="blog-flt-img">
+<p>Suspendisse potenti. Proin vestibulum, orci non pulvinar finibus, arcu risus bibendum dui, sagittis finibus est elit eu libero. Mauris feugiat sem nec nisi pretium, nec pharetra est auctor. Nam nec posuere ligula. Vivamus risus eros, ornare vitae lacinia quis, accumsan ut magna. Duis pulvinar, mi a malesuada sagittis, arcu sem aliquet quam, eget bibendum risus velit vel mauris. Quisque semper odio et libero facilisis, et volutpat urna dignissim. Mauris metus leo, accumsan et orci sed, fermentum interdum eros. Proin vitae semper metus. Sed eu convallis est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lectus tortor, viverra eu venenatis vel, eleifend at erat. Aenean ipsum est, porta pretium erat sit amet, viverra pulvinar sem. Aliquam euismod orci at neque molestie rhoncus. Fusce augue dui, feugiat vitae nibh vel, egestas sagittis leo.</p>
+
+<p>Etiam mauris nulla, consequat sit amet consequat a, imperdiet in nulla. Suspendisse malesuada at lacus in ullamcorper. Sed pellentesque justo arcu, id ultricies lacus laoreet ultricies. Nam iaculis condimentum ipsum, vitae posuere magna ultricies id. Fusce bibendum nisi non mi commodo, non ultricies sapien rhoncus. Nullam tortor risus, aliquet sit amet cursus sit amet, posuere nec quam. Quisque ut dolor ligula. Phasellus vitae placerat lectus, sed tincidunt ligula. Morbi non pulvinar enim. Curabitur quis gravida ipsum.</p>
+
+
+<hr id="blog-hr" /> 
+<div class="blog-tags">
+    <a href="#" class="a-tag">regular</a>
+    <a href="#" class="a-tag">longer tag</a>
+    <a href="#" class="a-tag">short</a>
+    <a href="#" class="a-tag">regular</a>
+    <a href="#" class="a-tag">longer tag</a>
+    <a href="#" class="a-tag">short</a>           
+</div>
+</div>
+    
+</div>  
+</div>
+
+
+<div id="ts-footer">
+
+<div id="ts-footer-inner">
+	<div class="foot-logo">
+	<h1>TestSiteLogo</h1>
+	
+		<div id="ft-social-icns">
+		<div class="ft-grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/></svg></div>
+		<div class="ft-grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"/></svg></div>
+		<div class="ft-grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/></svg></div>
+		<div class="ft-grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="0 0 24 24"><path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/></svg></div>
+		<div class="ft-grid-icn"><svg class="w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/></svg></div>
+		</div>
+	
+	</div>
+	<div class="foot-item-a">
+	<div class="ts-footer-head">List #1</div>
+	<ul>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	<li><a href="#">Test Bottom Link</a></li>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	</ul>
+	</div>
+	<div class="foot-item-b">
+	<div class="ts-footer-head">List #2</div>
+		<ul>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	<li><a href="#">Test Bottom Link</a></li>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	</ul>
+	</div>
+	<div class="foot-item-c">
+	<div class="ts-footer-head">List #3</div>
+		<ul>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	<li><a href="#">Test Bottom Link</a></li>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	</ul>
+	</div>
+	<div class="foot-item-d">
+		<div class="ts-footer-head">List #4</div>
+		<ul>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	<li><a href="#">Test Bottom Link</a></li>
+	<li><a href="#">Test</a></li>
+	<li><a href="#">Test Link</a></li>
+	</ul>
+	</div>
+</div>
+
+</div>
+
+<script type="text/javascript" src="js/img-gal.js"></script>
+
+</body>
+<script>
+
+let hamToggle = false;
+var ham = document.getElementById("ch-container");
+    
+function myHamburger(){
+    
+if (hamToggle === false) {    
+            
+            ham.classList.add("show-ham");
+            ham.classList.remove("hide-ham");
+            document.getElementById("ham-lines").style.display = "none";
+            document.getElementById("ham-close").style.display = "block";
+            hamToggle = true;
+            
+    } else {
+
+        ham.classList.add("hide-ham");
+        ham.classList.remove("show-ham");
+        document.getElementById("ham-lines").style.display = "block";
+        document.getElementById("ham-close").style.display = "none";
+        hamToggle = false;
+    };
+    
+};    
+    
+</script>
+
+<script>
+const div1 = document.getElementById("rg-srch-hold");
+const div2 = document.getElementById("tm-in-social-icns");
+const outersoc = document.getElementById("tm-soc-icns");
+const srch = document.getElementById("sp-srch-hold");
+    
+let x = false;
+    
+    function toggleSearchReg() {
+        
+        div1.classList.toggle('rg-srch-trans');
+        document.getElementById("rg-srch-mag").classList.toggle('rg-tog-hide');
+        document.getElementById("rg-srch-x").classList.toggle('rg-tog-show');
+        
+    };
+    
+    function toggleSearchSpec() {
+        
+        if (x === false) {
+            
+        div2.classList.toggle('tm-soc-icns-anim');
+            
+        document.getElementById("sp-srch-mag").classList.toggle('rg-tog-hide');
+        document.getElementById("sp-srch-x").classList.toggle('rg-tog-show');
+            
+        x = true;
+            
+            
+        } else if (x === true) {
+    
+        srch.classList.toggle('sp-srch-trans');
+            
+        document.getElementById("sp-srch-mag").classList.toggle('rg-tog-hide');
+        document.getElementById("sp-srch-x").classList.toggle('rg-tog-show');
+		
+		outersoc.style.display = "block";
+
+
+        x = false;
+        
+        }
+    };
+    
+    
+    div2.addEventListener("transitionend", myEndFunction); 
+    srch.addEventListener("transitionend", myEndFunction); 
+    
+    function myEndFunction() {
+        
+        if (x === true) {
+        
+        srch.classList.add('sp-srch-trans');
+		outersoc.style.display = "none";
+            
+        } else {
+	
+	div2.classList.remove('tm-soc-icns-anim');
+				
+        }
+    }
+    
+</script>
+<script>
+
+const childElement = document.getElementById('widthtest');
+
+const parentElement = childElement.parentElement;
+
+const parentWidth = parentElement.offsetWidth;
+
+console.log('Parent div width:', parentWidth);
+
+</script>
+</html>
