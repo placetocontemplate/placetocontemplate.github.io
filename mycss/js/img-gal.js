@@ -1,4 +1,4 @@
-const car = ["graphics/3.png","graphics/4.png","graphics/5.png"];
+const car = ["graphics/3sm.png","graphics/4sm.png","graphics/5sm.png"];
 
 document.getElementById('number-hold2').innerHTML = '<div id="galfade2"><img src="' + car[0] + '"></div>';
     
