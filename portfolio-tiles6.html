@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Place to Contemplate</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+<style>
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 23px;
+	font-family: "Bellota Text", sans-serif;
+	color: #2f2f2f;
+}
+
+p {
+	line-height: 38px;
+}
+
+:root {
+	--bg-light: #f7f7f7;
+	--sm-link: #2f2f2f;
+	--accent: #008297;
+	--accent-grad: linear-gradient(180deg,rgb(0, 147, 170) 0%, rgb(0, 130, 151) 100%);
+	--default-width: 1300px;
+	scroll-behavior: smooth;
+	}
+
+a:link {
+	color: var(--accent);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:active {
+	color: var(--accent);
+}
+
+a:visited {
+	color: var(--accent);
+}
+
+a:hover {
+	color: var(--accent);
+	text-decoration: underline;
+}
+
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 47px;
+  margin: 0 0 43px 0;
+}
+
+h2 {
+  	font-size: 38px;
+	font-family: "Bellota Text", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	margin: 10px 0 20px;
+}
+
+h3 {
+		margin: 0 0 20px 0;
+		font-family: "Vollkorn", serif;
+		font-optical-sizing: auto;
+		font-weight: 500;
+		font-style: normal;
+		font-size: 40px;
+}
+
+h6 {
+	  font-family: "Winky Rough", sans-serif;
+	  font-optical-sizing: auto;
+	  font-weight: 400;
+	  font-style: normal;
+	  font-size: 42px;
+	  margin: 0 0 20px 0;
+	  line-height: 49px;
+}
+
+#port-container {
+	margin: 0 20px;
+}
+
+#port-nav {
+	padding: 40px 0;
+	background: var(--bg-light);
+}
+
+#port-nav-container {
+	max-width: 1400px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 2fr 1fr 2fr;
+	font-size: 21px;
+}
+
+#port-nav-left {
+	text-align: center;
+	align-self: center;
+}
+
+#port-nav-right {
+	text-align: right;
+	align-self: center;
+}
+
+.port-nav-ul li {
+	display: inline;
+	margin: 0 20px 0 0;
+	text-transform: uppercase;
+	font-family: "PT Sans", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	
+}
+
+.port-nav-ul a:link, .port-nav-ul a:visited, .port-nav-ul a:active {
+	color: var(--sm-link);
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.port-nav-ul a:hover {
+	text-decoration: underline;
+}
+
+
+
+#port-gener-2col h1 {
+	text-align: center;
+}
+
+#port-gener-3col {
+	max-width: 1400px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1.75fr 2.25fr 1.5fr;
+	gap: 90px;
+}
+
+#port-gener-3col img {
+	width: 100%;
+}
+
+
+#port-gener-con {
+	max-width: var(--default-width);
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+	gap: 100px;
+}
+
+#port-gener-con span {
+	font-size: .7em;
+}
+
+#port-gener-col2 {
+	text-align: center;
+}
+
+#port-gener-col2 img {
+	width: 100%;
+}
+
+#jellybean-item {
+	max-width: 1300px;
+	margin: auto;
+}
+
+#jellybean-item h1 {
+	text-align: center;
+}
+
+#jellybean-rt-col {
+	background: var(--accent-grad);
+	border-radius: 30px;
+	color: #fff;
+	padding: 40px;
+	margin: 20px 0 20px -20px;
+}
+
+#jellybean-cols {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+#jellybean-pic-holder {
+	background: #a4a4df;
+	border-radius: 50px;
+	height: 430px;
+  background-size: cover !important;
+  background-image: url(graphics/mirror.png);
+  background-position: 0px -105px;
+}
+
+#port-footer {
+	background-color: var(--bg-light);
+	margin: 80px 0 0 0;
+	padding: 50px 0 80px;
+}
+
+#port-footer-container {
+	display: grid;
+	grid-template-columns: 2fr 1fr 2fr;
+	max-width: 1400px;
+	margin: auto;
+	font-size: 21px;
+}
+
+#port-footer-right {
+	text-align: right;
+	align-self: center;
+}
+
+#bigpic-2col {
+	max-width: var(--default-width);
+	margin: auto;
+}
+
+#bigpic-cols {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 60px;
+}
+
+#bigpic-textcol {
+
+}
+
+#bigpic-textcol {
+	line-height: 34px;
+}
+
+#bigpic-piccol {
+	background: #bfbfbf;
+	border: 10px double #fff;
+	aspect-ratio: 3 / 2;
+}
+
+.custom-hr {
+	margin: 50px auto;
+	border-bottom: dotted 4px var(--accent);
+	max-width: 890px;
+	opacity: .3;
+}
+
+#logo-circ {
+	width: 130px;
+	height: 130px;
+	margin: auto;
+	overflow: hidden;
+}
+
+#logo-circ img {
+	width: 100%;
+}
+
+.port-main-head {
+	text-align: center;
+}
+
+.skills-list-text {
+	font-size: 34px;
+}
+
+.skills-list-bullets {
+	margin: 0;
+}
+
+.skills-list-bullets p {
+	margin: 10px 0 0 0;
+}
+
+#port-hampopup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	z-index: 10;
+}
+
+.port-hampopup-li {
+	font-size: 45px;
+	line-height: 67px;
+	list-style-type: none;
+}
+
+
+
+#port-hampopup-leftcol {
+	background: #ececec;
+	transition: width 280ms 0s;
+	width: 0;
+	height: 100%;
+	overflow: auto;
+}
+
+#port-hampopup-leftcol a:link, #port-hampopup-leftcol a:hover, #port-hampopup-leftcol a:active, #port-hampopup-leftcol a:visited {
+	color: var(--sm-link);
+}
+
+#port-hampopup-grid {
+	display: grid;
+	grid-template-columns: auto min-content;
+	height: 100%;
+}
+
+.hampop-animate {
+	width: 100% !important;
+}
+
+.x-animate {
+	background: red !important;
+}
+
+#port-hampopup-xhold {
+	color: #fff;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	background: #fff;
+	transition: background 500ms 0s;
+	display: flex;
+}
+
+#port-hampopup-x {
+	align-self: center;
+	margin: auto;
+}
+
+
+#mobile-nav {
+	display: none;
+	padding: 30px 25px;
+	background: var(--bg-light);
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+#mobile-nav-ham {
+	color: var(--sm-link);
+	height: 46px;
+	width: 46px;
+	align-self: center;
+	cursor: pointer;
+}
+
+#mobile-nav-logo {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+
+#mobile-nav-logo img {
+  width: 100%;
+}
+
+
+#mobile-col3 {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.speaker-mask {
+	display: inline-block;
+	margin: 0 0 30px 0;
+}
+
+#port-contact {
+	max-width: var(--default-width);
+	margin: auto;
+	display: grid;
+	grid-template-columns: 2fr 1fr;	
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+
+	#port-gener-3col {
+		grid-template-columns: 1fr;	
+		gap: 30px;
+	}
+	
+	#port-gener-3col img {
+		max-width: 380px;
+	}
+	
+	.flippable {
+		-webkit-transform: scaleX(-1);
+		transform: scaleX(-1);
+	}
+
+}
+
+
+@media only screen and (max-width: 900px) {
+
+	#port-gener-col2 img {
+		max-width: 400px;
+	}
+
+	#mobile-nav {
+		display: grid;
+	}
+
+	#port-nav {
+		display: none;
+	}
+	
+	#port-gener-con {
+		grid-template-columns: 1fr;	
+		gap: 30px;
+	}
+	
+	#port-gener-col2 {
+		order: -1;
+	}
+	
+	#port-contact {
+		grid-template-columns: 1fr;	
+		gap: 30px;
+	}
+
+	#port-contact-col2 {
+		order: -1;
+	}
+	
+	#port-contact-col2 img {
+		width: 100%;
+	}
+
+}
+
+
+@media only screen and (max-width: 740px) {
+		
+	#bigpic-cols {
+		grid-template-columns: 1fr;	
+	}
+	
+	#bigpic-piccol {
+		order: -1;
+		min-height: 300px;
+	}
+	
+	#jellybean-rt-col {
+		margin: -40px 0 0 40px;
+	}
+	
+	#jellybean-cols {
+		grid-template-columns: 1fr;
+	}
+	
+	#jellybean-pic-holder {
+		min-height: 300px;
+		margin: 0 30px 0 0;
+	}
+
+}
+
+
+@media only screen and (max-width: 580px) {
+		
+	#bigpic-piccol {
+		width: 100%;
+		aspect-ratio: unset;
+		border: none;
+	}
+
+}
+
+</style>
+<style>
+#pop-link-copied {
+    background: #7020b3;
+    padding: 15px 0 13px;
+    color: #fff;
+    font-size: 23px;
+    display: inline-block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    margin-top: -70px;
+    opacity: 0;
+    transition: margin-top 700ms, opacity 800ms;
+	font-weight: bold;
+	z-index: 400;
+}
+    
+    .show-alert {
+        margin-top: 5px !important;
+        opacity: 1 !important;
+    }
+    .hide-alert {
+        margin-top: -70px !important;
+        opacity: 0 !important;
+        transition-delay: 800ms !important;
+    }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="pop-link-copied">
+</div> 
+
+<div id="port-hampopup">
+	<div id="port-hampopup-grid">
+		<div id="port-hampopup-leftcol" class="">
+					<ul class="port-hampopup-li" onClick="hamburgerPop()">
+						<li><a href="#sec-about">About</a></li>
+						<li><a href="#sec-skills">Skills</a></li>
+						<li><a href="#sec-projects">Projects</a></li>
+						<li><a href="#sec-contact">Contact</a></li>
+					</ul>
+		</div>
+		<div id="port-hampopup-xhold" class="" onclick="hamburgerPop()">
+		<div id="port-hampopup-x">
+			<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+			<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/>
+			</svg>
+
+		</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="port-nav">
+	<div id="port-nav-container">
+		<div id="port-nav-left">
+		
+			<ul class="port-nav-ul">
+				<li><a href="#sec-about">About</a></li>
+				<li><a href="#sec-skills">Skills</a></li>
+				<li><a href="#sec-projects">Projects</a></li>
+			</ul>
+		
+		
+		</div>
+		<div>
+			<div id="logo-circ"><img src="graphics/ptc-logo.png"></div>
+		</div>
+		<div id="port-nav-right">
+
+			<ul class="port-nav-ul">
+				<li><a href="#sec-contact">Contact</a></li>
+				<li><a href='javascript:copyURL()'>Share</a></li>
+				<li><a href="#" onClick="hamburgerPop()">Ham</a></li>
+			</ul>
+
+		</div>
+	</div>
+</div>
+
+<div id="mobile-nav">
+	<div>
+	</div>
+	<div>
+		<div id="mobile-nav-logo"><img src="graphics/ptc-logo.png"></div>
+	</div>
+	<div id="mobile-col3">
+		<div id="mobile-nav-ham" onclick="hamburgerPop()">
+			<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="none" viewBox="0 0 24 24">
+			<path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+			</svg>
+		</div>
+	</div>
+</div>
+
+<br/><br/><br/>
+
+<div id="port-container">
+
+	<div id="port-gener-3col">
+		<div>
+			<img src="graphics/fish-header2.png" width="350">
+		</div>
+		<div>
+		<a name="sec-about"></a><h6>Welcome</h6>
+		<p>Welcome to Place to Contemplate, my online portfolio.</p>
+		<p>Sentence two goes here and then more information as well!</p>
+		<p>Scroll down for more!</p>
+				
+		</div>
+		<div>
+			<img src="graphics/purp-blob2.png" width="350" class="flippable">
+		</div>
+	</div>
+
+
+	<div class="custom-hr"></div>
+
+	<div id="port-gener-2col">
+
+		<a name="sec-skills"></a><h1>Skills</h1>
+
+		<div id="port-gener-con" class="skills-list-text">
+			
+			<div id="port-gener-col1">
+			
+				<ul class="skills-list-bullets">
+					<li>List Item
+					</br><span><p>Line of text describing the item. Second sentence of this descriptive line. <a href="#">Third sentence of this descriptive line</a>.</p></span></br></li>
+					<li>List Item Variation
+					</br><span><p>Line of text describing the item. Second sentence of this descriptive line.</p></span></br></li>
+					<li>List Item
+					</br><span><p>Line of text describing the item. Second sentence of this descriptive line. Third sentence of this descriptive line.</p></span></br></li>
+					<li>List Item
+					</br><span><p>Line of text describing the item. Second sentence of this descriptive line.</p></span></br></li>
+				</ul>
+			
+			</div>
+			<div id="port-gener-col2">
+				<div class="speaker-mask">
+					<div style="background: url(&quot;graphics/traced-win2.png&quot;) 0px -272px;" class="beegee" data-rate="-.4">
+						<img src="graphics/line-speaker-masked.png" width="350" style="display:block">
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		
+	</div>
+
+	<div class="custom-hr"></div>
+
+	<div id="jellybean-item">
+
+	<div>
+		<h1>A Full Sentence Section Name</h1>
+	</div>
+
+	<div id="jellybean-cols">
+	<div id="jellybean-pic-holder">
+	
+	</div>
+
+	<div id="jellybean-rt-col">
+	<h3>Heading of project</h3>
+
+		<p>This is the beggining of a 2-3 paragraph summary about this exciting project!</p>
+
+		<p>This is the middle of a 2-3 paragraph summary about this exciting project!</p>
+
+		<p>This is the end of a 2-3 paragraph summary about this exciting project!</p>
+	</div>
+	</div>
+
+	</div><!-- end item -->
+
+	<div class="custom-hr"></div>
+
+	<a name="sec-projects"></a><h1 class="port-main-head">Projects</h1>
+
+	<div id="bigpic-2col">
+
+		<div id="bigpic-cols">
+
+		<div id="bigpic-textcol">
+			<h3>Heading of box</h3>
+			<p>This is the beggining of a 2-3 paragraph summary about this exciting project! This is the middle of a 2-3 paragraph summary about this exciting project. This is the end of a 2-3 paragraph summary about this exciting project!</p> 
+			<p>This is the beggining of a 2-3 paragraph summary about this exciting project! This is the middle of a 2-3 paragraph summary about this exciting project. This is the end of a 2-3 paragraph summary about this exciting project!</p> 
+		</div>
+		
+		<div id="bigpic-piccol">
+
+		</div></div>
+
+	</div>
+
+	<div class="custom-hr"></div>
+
+	<div id="bigpic-2col">
+
+		<div id="bigpic-cols">
+
+		<div id="bigpic-textcol">
+		<h3>Heading of box</h3>
+		<p>This is the beggining of a 2-3 paragraph summary about this exciting project! This is the middle of a 2-3 paragraph summary about this exciting project. This is the end of a 2-3 paragraph summary about this exciting project!</p> 
+		<p>This is the beggining of a 2-3 paragraph summary about this exciting project! This is the middle of a 2-3 paragraph summary about this exciting project. This is the end of a 2-3 paragraph summary about this exciting project!</p> 
+		</div>
+		<div id="bigpic-piccol">
+
+		</div></div>
+
+	</div>
+
+	<div class="custom-hr" /></div>
+	
+	<div id="port-contact">
+	
+		<div id="port-contact-col1">
+			<br/><br/><a name="sec-contact"></a><h1>Contact</h1>
+		
+			<p>This is the beggining of a 2-3 paragraph summary about this exciting project! This is the middle of a 2-3 paragraph summary about this exciting project. This is the end of a 2-3 paragraph summary about this exciting project!</p>
+		</div>
+		<div id="port-contact-col2">
+			<img src="graphics/window-solo.png" style="max-width:550px">
+		</div>
+	</div>
+
+</div>
+
+<div id="port-footer">
+	<div id="port-footer-container">
+	<div id="port-footer-left">
+	&nbsp;
+	</div>
+	<div>
+	<div id="logo-circ"><img src="graphics/ptc-logo.png"></div>
+	</div>
+	<div id="port-footer-right">
+	
+			<ul class="port-nav-ul">
+				<li><a href='javascript:copyURL()'>Share</a></li>
+				<li><a href="#">Top</a></li>
+			</ul>
+	</div>
+	</div>
+</div>
+
+</body>
+<script>
+
+const hampop = document.getElementById("port-hampopup");
+const hamcol = document.getElementById("port-hampopup-leftcol");
+const hamx = document.getElementById("port-hampopup-xhold");
+
+var toggle = false;
+
+
+function hamburgerPop() {
+
+	if (toggle === true) {
+		hampop.style.visibility = "hidden"; 
+		hamcol.classList.toggle("hampop-animate")
+		hamx.classList.toggle("x-animate")
+		toggle = false;
+	} else {
+
+	hampop.style.visibility = "visible"; 
+	hamcol.classList.toggle("hampop-animate")
+	hamx.classList.toggle("x-animate")
+	toggle = true;
+		
+	};
+
+}
+
+</script>
+<script>
+
+	window.addEventListener('scroll', function(e) {
+
+		const target = document.querySelectorAll('.beegee');
+		
+		var index = 0, length = target.length;
+			for(index; index < length; index++) {
+			
+			var bgpos = window.pageYOffset * target[index].dataset.rate;
+			target[index].style.backgroundPosition = '0px ' + bgpos + 'px';
+		
+		}
+		
+	});
+
+</script>
+<script>
+
+const popalert = document.getElementById("pop-link-copied");
+
+    
+function copyCurrentURL() {
+  navigator.clipboard.writeText(window.location.href)
+    .then(() => {
+      console.log('URL copied to clipboard!');
+	  popalert.innerHTML = "URL copied to clipboard!";
+    })
+    .catch(err => {
+      console.error('Failed to copy URL: ', err);
+	  popalert.innerHTML = `Failed to copy URL: ${err}`;
+    });
+}
+
+
+    
+function copyURL() {
+    popalert.classList.remove("hide-alert");
+    popalert.classList.toggle("show-alert");
+    
+    copyCurrentURL();
+    
+}    
+    
+popalert.addEventListener("transitionend", () => {
+    popalert.classList.remove("show-alert");
+    popalert.classList.add("hide-alert");
+});
+    
+</script>
+</html>
