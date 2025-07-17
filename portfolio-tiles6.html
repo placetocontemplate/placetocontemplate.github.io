@@ -71,6 +71,7 @@ h3 {
 		font-weight: 500;
 		font-style: normal;
 		font-size: 40px;
+		line-height: 40px;
 }
 
 h6 {
@@ -90,6 +91,8 @@ h6 {
 #port-nav {
 	padding: 40px 0;
 	background: var(--bg-light);
+	z-index: 500;
+	position: relative;
 }
 
 #port-nav-container {
@@ -249,6 +252,8 @@ h6 {
 	border-bottom: dotted 4px var(--accent);
 	max-width: 890px;
 	opacity: .3;
+	position: relative;
+	z-index: 0;
 }
 
 #logo-circ {
@@ -283,7 +288,7 @@ h6 {
 	width: 100%;
 	height: 100%;
 	visibility: hidden;
-	z-index: 10;
+	z-index: 1000;
 }
 
 .port-hampopup-li {
@@ -341,6 +346,8 @@ h6 {
 	padding: 30px 25px;
 	background: var(--bg-light);
 	grid-template-columns: 1fr 1fr 1fr;
+	z-index: 500;
+	position: relative;
 }
 
 #mobile-nav-ham {
@@ -377,6 +384,30 @@ h6 {
 	margin: auto;
 	display: grid;
 	grid-template-columns: 2fr 1fr;	
+}
+
+
+#port-sticky-menu {
+	background: var(--bg-light);
+	text-align: center;
+	padding: 5px 0;
+	font-size: 21px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 200;
+}
+
+#port-sticky-menu-mob {
+	background: var(--bg-light);
+	text-align: center;
+	height: 50px;
+	font-size: 21px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 200;
+	display: none;
 }
 
 
@@ -434,6 +465,14 @@ h6 {
 	
 	#port-contact-col2 img {
 		width: 100%;
+	}
+	
+	#port-sticky-menu {
+		display: none;
+	}
+	
+	#port-sticky-menu-mob {
+		display: block;
 	}
 
 }
@@ -495,7 +534,7 @@ h6 {
     opacity: 0;
     transition: margin-top 700ms, opacity 800ms;
 	font-weight: bold;
-	z-index: 400;
+	z-index: 1200;
 }
     
     .show-alert {
@@ -571,6 +610,30 @@ h6 {
 		</div>
 	</div>
 </div>
+
+
+<div id="port-sticky-menu">
+			<ul class="port-nav-ul">
+				<li><a href="#sec-about">About</a></li>
+				<li><a href="#sec-skills">Skills</a></li>
+				<li><a href="#sec-projects">Projects</a></li>
+				<li><a href="#sec-contact">Contact</a></li>
+				<li><a href='javascript:copyURL()'>Share</a></li>
+			</ul>
+</div>
+
+<div id="port-sticky-menu-mob">
+
+	<div id="mobile-col3">
+		<div id="mobile-nav-ham" onclick="hamburgerPop()">
+			<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="none" viewBox="0 0 24 24">
+			<path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+			</svg>
+		</div>
+	</div>
+
+</div>
+
 
 <div id="mobile-nav">
 	<div>
@@ -712,7 +775,8 @@ h6 {
 		<div id="port-contact-col1">
 			<br/><br/><a name="sec-contact"></a><h1>Contact</h1>
 		
-			<p>This is the beggining of a 2-3 paragraph summary about this exciting project! This is the middle of a 2-3 paragraph summary about this exciting project. This is the end of a 2-3 paragraph summary about this exciting project!</p>
+			<p>If you would like to get in contact with me, use this email link.</p>
+			<p>My resume is not online, but I may have emailed it to you if we have been in conversation. Please do check your attachments!
 		</div>
 		<div id="port-contact-col2">
 			<img src="graphics/window-solo.png" style="max-width:550px">
