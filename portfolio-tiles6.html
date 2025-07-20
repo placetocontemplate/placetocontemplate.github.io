@@ -12,6 +12,7 @@ body {
 	font-size: 23px;
 	font-family: "Bellota Text", sans-serif;
 	color: #2f2f2f;
+	scroll-padding-top:330px;
 }
 
 p {
@@ -88,6 +89,10 @@ h6 {
 	margin: 0 20px;
 }
 
+#port-about, #port-skills, #port-projects, #port-contact {
+	scroll-margin-top: 100px
+}
+
 #port-nav {
 	padding: 40px 0;
 	background: var(--bg-light);
@@ -133,13 +138,16 @@ h6 {
 	text-decoration: underline;
 }
 
-
+#port-gener-2col {
+	scroll-margin-top: 130px;
+}
 
 #port-gener-2col h1 {
 	text-align: center;
 }
 
 #port-gener-3col {
+	scroll-margin-top: 400px;
 	max-width: 1400px;
 	margin: auto;
 	display: grid;
@@ -198,9 +206,9 @@ h6 {
 	background: #a4a4df;
 	border-radius: 50px;
 	height: 430px;
-  background-size: cover !important;
-  background-image: url(graphics/mirror.png);
-  background-position: 0px -105px;
+	background-size: cover !important;
+	background-image: url(graphics/mirror.png);
+	background-position: 0px -105px;
 }
 
 #port-footer {
@@ -230,7 +238,7 @@ h6 {
 #bigpic-cols {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 60px;
+	gap: 100px;
 }
 
 #bigpic-textcol {
@@ -243,8 +251,14 @@ h6 {
 
 #bigpic-piccol {
 	background: #bfbfbf;
-	border: 10px double #fff;
 	aspect-ratio: 3 / 2;
+	box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.1);
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+#bigpic-piccol img {
+	width: 100%;
 }
 
 .custom-hr {
@@ -413,6 +427,38 @@ h6 {
 	display: none;
 }
 
+#port-top-spacer {
+	height: 100px;
+}
+
+#screenshot-hov-overlay {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	opacity: 0;
+	cursor: pointer;
+	transition: opacity 200ms ease-in;
+	box-shadow: 5px -3px 63px 27px rgba(0,0,0,0.43) inset;
+	-webkit-box-shadow: 5px -3px 63px 27px rgba(0,0,0,0.43) inset;
+	-moz-box-shadow: 5px -3px 63px 27px rgba(0,0,0,0.43) inset;
+}
+
+#screenshot-hov-overlay:hover {
+	opacity: 1;
+}
+
+#screenshot-hov-mag {
+	background: #424242d6;
+	border-radius: 10px;
+	align-self: center;
+	margin: auto;
+	color: #fff;
+	padding: 10px;
+	width: 65px;
+	height: 65px;
+}
+
+
 
 
 @media only screen and (max-width: 1200px) {
@@ -477,19 +523,29 @@ h6 {
 	#port-sticky-menu-mob {
 		display: block;
 	}
+	
+	#port-top-spacer {
+		display: none;
+	}
 
 }
 
 
 @media only screen and (max-width: 740px) {
 		
+	h1 {
+		font-size: 38px;
+	}
+		
 	#bigpic-cols {
 		grid-template-columns: 1fr;	
+		gap: 50px;
 	}
 	
 	#bigpic-piccol {
 		order: -1;
 		min-height: 300px;
+		
 	}
 	
 	#jellybean-rt-col {
@@ -521,7 +577,7 @@ h6 {
 </style>
 <style>
 #pop-link-copied {
-    background: #7020b3;
+    background: var(--accent-grad);
     padding: 15px 0 13px;
     color: #fff;
     font-size: 23px;
@@ -568,10 +624,10 @@ h6 {
 	<div id="port-hampopup-grid">
 		<div id="port-hampopup-leftcol" class="">
 					<ul class="port-hampopup-li" onClick="hamburgerPop()">
-						<li><a href="#sec-about">About</a></li>
-						<li><a href="#sec-skills">Skills</a></li>
-						<li><a href="#sec-projects">Projects</a></li>
-						<li><a href="#sec-contact">Contact</a></li>
+						<li><a href="#port-about">About</a></li>
+						<li><a href="#port-skills">Skills</a></li>
+						<li><a href="#port-projects">Projects</a></li>
+						<li><a href="#port-contact">Contact</a></li>
 					</ul>
 		</div>
 		<div id="port-hampopup-xhold" class="" onclick="hamburgerPop()">
@@ -592,9 +648,9 @@ h6 {
 		<div id="port-nav-left">
 		
 			<ul class="port-nav-ul">
-				<li><a href="#sec-about">About</a></li>
-				<li><a href="#sec-skills">Skills</a></li>
-				<li><a href="#sec-projects">Projects</a></li>
+				<li><a href="#port-about">About</a></li>
+				<li><a href="#port-skills">Skills</a></li>
+				<li><a href="#port-projects">Projects</a></li>
 			</ul>
 		
 		
@@ -605,9 +661,8 @@ h6 {
 		<div id="port-nav-right">
 
 			<ul class="port-nav-ul">
-				<li><a href="#sec-contact">Contact</a></li>
+				<li><a href="#port-contact">Contact</a></li>
 				<li><a href='javascript:copyURL()'>Share</a></li>
-				<li><a href="#" onClick="hamburgerPop()">Ham</a></li>
 			</ul>
 
 		</div>
@@ -617,10 +672,10 @@ h6 {
 
 <div id="port-sticky-menu">
 			<ul class="port-nav-ul">
-				<li><a href="#sec-about">About</a></li>
-				<li><a href="#sec-skills">Skills</a></li>
-				<li><a href="#sec-projects">Projects</a></li>
-				<li><a href="#sec-contact">Contact</a></li>
+				<li><a href="#port-about">About</a></li>
+				<li><a href="#port-skills">Skills</a></li>
+				<li><a href="#port-projects">Projects</a></li>
+				<li><a href="#port-contact">Contact</a></li>
 				<li><a href='javascript:copyURL()'>Share</a></li>
 			</ul>
 </div>
@@ -655,14 +710,16 @@ h6 {
 
 <br/><br/><br/>
 
+
 <div id="port-container">
 
+	<div id="port-about">
 	<div id="port-gener-3col">
 		<div>
 			<img src="graphics/fish-header2.png" width="350">
 		</div>
 		<div>
-		<a name="sec-about"></a><h6>Welcome</h6>
+		<h6>Welcome</h6>
 		<p>Welcome to Place to Contemplate, my online portfolio.</p>
 		<p>Sentence two goes here and then more information as well!</p>
 		<p>Scroll down for more!</p>
@@ -672,13 +729,14 @@ h6 {
 			<img src="graphics/purp-blob2.png" width="350" class="flippable">
 		</div>
 	</div>
-
+	</div>
 
 	<div class="custom-hr"></div>
-
+	
+	<div id="port-skills">
 	<div id="port-gener-2col">
 
-		<a name="sec-skills"></a><h1>Skills</h1>
+		<h1>Skills</h1>
 
 		<div id="port-gener-con" class="skills-list-text">
 			
@@ -707,79 +765,91 @@ h6 {
 		</div>
 		
 	</div>
-
-	<div class="custom-hr"></div>
-
-	<div id="jellybean-item">
-
-	<div>
-		<h1>A Full Sentence Section Name</h1>
 	</div>
 
-	<div id="jellybean-cols">
-	<div id="jellybean-pic-holder">
+	<div class="custom-hr"></div>
 	
-	</div>
+	<div id="port-projects">
 
-	<div id="jellybean-rt-col">
-	<h3>Heading of project</h3>
-
-		<p>This is the beggining of a 2-3 paragraph summary about this exciting project!</p>
-
-		<p>This is the middle of a 2-3 paragraph summary about this exciting project!</p>
-
-		<p>This is the end of a 2-3 paragraph summary about this exciting project!</p>
-	</div>
-	</div>
-
-	</div><!-- end item -->
-
-	<div class="custom-hr"></div>
-
-	<a name="sec-projects"></a><h1 class="port-main-head">Projects</h1>
+	<h1 class="port-main-head">Projects</h1>
 
 	<div id="bigpic-2col">
 
 		<div id="bigpic-cols">
 
 		<div id="bigpic-textcol">
-			<h3>Heading of box</h3>
+			<h3>Scalable CSS</h3>
 			<p>This is the beggining of a 2-3 paragraph summary about this exciting project! This is the middle of a 2-3 paragraph summary about this exciting project. This is the end of a 2-3 paragraph summary about this exciting project!</p> 
 			<p>This is the beggining of a 2-3 paragraph summary about this exciting project! This is the middle of a 2-3 paragraph summary about this exciting project. This is the end of a 2-3 paragraph summary about this exciting project!</p> 
 		</div>
 		
-		<div id="bigpic-piccol">
-
+		<a id="bigpic-piccol" style="background:url(graphics/bluescaling.png); background-size:cover" href="#" target="_blank">
+		<div id="screenshot-hov-overlay">
+		<div id="screenshot-hov-mag">
+<svg width="100%" height="100%" viewBox="0 0 15.069671 14.811822" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+<defs id="defs1" /><g id="layer1" transform="translate(-111.9355,-75.189916)">
+<path id="path1" style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.0496012;stroke-dasharray:0.396813, 0.198407" d="m 136.40701,-30.050021 a 6.2103338,6.2103338 0 0 0 -1.51718,4.066986 6.2103338,6.2103338 0 0 0 6.21011,6.210101 6.2103338,6.2103338 0 0 0 6.04201,-4.842746 h 4.75541 l -3.6e-4,-3.099752 h -4.83434 a 6.2103338,6.2103338 0 0 0 -5.96236,-4.47807 6.2103338,6.2103338 0 0 0 -4.69329,2.143481 z m 1.2475,1.080875 a 4.5594854,4.5594854 0 0 1 3.44579,-1.573445 4.5594854,4.5594854 0 0 1 4.55956,4.559556 4.5594854,4.5594854 0 0 1 -4.55956,4.559555 4.5594854,4.5594854 0 0 1 -4.55955,-4.559555 4.5594854,4.5594854 0 0 1 1.11376,-2.986111 z" transform="rotate(45)" />
+<path id="rect2" style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.460999;stroke-dasharray:3.68803, 1.84402" d="m 117.50601,78.274292 v 2.511475 h -2.64842 v 1.506884 h 2.64842 v 2.511475 h 1.50688 v -2.511475 h 2.37453 v -1.506884 h -2.37453 v -2.511475 z" /></g></svg>
+	    </div>
+		</div></a>
 		</div></div>
-
-	</div>
 
 	<div class="custom-hr"></div>
 
 	<div id="bigpic-2col">
-
 		<div id="bigpic-cols">
-
-		<div id="bigpic-textcol">
-		<h3>Heading of box</h3>
-		<p>This is the beggining of a 2-3 paragraph summary about this exciting project! This is the middle of a 2-3 paragraph summary about this exciting project. This is the end of a 2-3 paragraph summary about this exciting project!</p> 
-		<p>This is the beggining of a 2-3 paragraph summary about this exciting project! This is the middle of a 2-3 paragraph summary about this exciting project. This is the end of a 2-3 paragraph summary about this exciting project!</p> 
+				<div id="bigpic-textcol">
+					<h3>Section Dividers</h3>
+					<p>This is the beggining of a 2-3 paragraph summary about this exciting project! This is the middle of a 2-3 paragraph summary about this exciting project. This is the end of a 2-3 paragraph summary about this exciting project!</p> 
+					<p>This is the beggining of a 2-3 paragraph summary about this exciting project! This is the middle of a 2-3 paragraph summary about this exciting project. This is the end of a 2-3 paragraph summary about this exciting project!</p> 
+				</div>
+			<a id="bigpic-piccol" style="background:url(graphics/dividers.png); background-size:cover" href="projects.html" target="_blank">
+					<div id="screenshot-hov-overlay">
+		<div id="screenshot-hov-mag">
+<svg width="100%" height="100%" viewBox="0 0 15.069671 14.811822" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+<defs id="defs1" /><g id="layer1" transform="translate(-111.9355,-75.189916)">
+<path id="path1" style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.0496012;stroke-dasharray:0.396813, 0.198407" d="m 136.40701,-30.050021 a 6.2103338,6.2103338 0 0 0 -1.51718,4.066986 6.2103338,6.2103338 0 0 0 6.21011,6.210101 6.2103338,6.2103338 0 0 0 6.04201,-4.842746 h 4.75541 l -3.6e-4,-3.099752 h -4.83434 a 6.2103338,6.2103338 0 0 0 -5.96236,-4.47807 6.2103338,6.2103338 0 0 0 -4.69329,2.143481 z m 1.2475,1.080875 a 4.5594854,4.5594854 0 0 1 3.44579,-1.573445 4.5594854,4.5594854 0 0 1 4.55956,4.559556 4.5594854,4.5594854 0 0 1 -4.55956,4.559555 4.5594854,4.5594854 0 0 1 -4.55955,-4.559555 4.5594854,4.5594854 0 0 1 1.11376,-2.986111 z" transform="rotate(45)" />
+<path id="rect2" style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.460999;stroke-dasharray:3.68803, 1.84402" d="m 117.50601,78.274292 v 2.511475 h -2.64842 v 1.506884 h 2.64842 v 2.511475 h 1.50688 v -2.511475 h 2.37453 v -1.506884 h -2.37453 v -2.511475 z" /></g></svg>
+	    </div>
+		</div></a>
 		</div>
-		<div id="bigpic-piccol">
-
-		</div></div>
-
 	</div>
 
-	<div class="custom-hr" /></div>
+	<div class="custom-hr"></div>
+	
+		<div id="bigpic-2col">
+		<div id="bigpic-cols">
+				<div id="bigpic-textcol">
+					<h3>Simple Cart</h3>
+					<p>This is the beggining of a 2-3 paragraph summary about this exciting project! This is the middle of a 2-3 paragraph summary about this exciting project. This is the end of a 2-3 paragraph summary about this exciting project!</p> 
+					<p>This is the beggining of a 2-3 paragraph summary about this exciting project! This is the middle of a 2-3 paragraph summary about this exciting project. This is the end of a 2-3 paragraph summary about this exciting project!</p> 
+				</div>
+			<a id="bigpic-piccol" style="background:url(graphics/simplecart.png); background-size:cover" href="#" target="_blank">
+			<div id="screenshot-hov-overlay">
+		<div id="screenshot-hov-mag">
+<svg width="100%" height="100%" viewBox="0 0 15.069671 14.811822" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+<defs id="defs1" /><g id="layer1" transform="translate(-111.9355,-75.189916)">
+<path id="path1" style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.0496012;stroke-dasharray:0.396813, 0.198407" d="m 136.40701,-30.050021 a 6.2103338,6.2103338 0 0 0 -1.51718,4.066986 6.2103338,6.2103338 0 0 0 6.21011,6.210101 6.2103338,6.2103338 0 0 0 6.04201,-4.842746 h 4.75541 l -3.6e-4,-3.099752 h -4.83434 a 6.2103338,6.2103338 0 0 0 -5.96236,-4.47807 6.2103338,6.2103338 0 0 0 -4.69329,2.143481 z m 1.2475,1.080875 a 4.5594854,4.5594854 0 0 1 3.44579,-1.573445 4.5594854,4.5594854 0 0 1 4.55956,4.559556 4.5594854,4.5594854 0 0 1 -4.55956,4.559555 4.5594854,4.5594854 0 0 1 -4.55955,-4.559555 4.5594854,4.5594854 0 0 1 1.11376,-2.986111 z" transform="rotate(45)" />
+<path id="rect2" style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.460999;stroke-dasharray:3.68803, 1.84402" d="m 117.50601,78.274292 v 2.511475 h -2.64842 v 1.506884 h 2.64842 v 2.511475 h 1.50688 v -2.511475 h 2.37453 v -1.506884 h -2.37453 v -2.511475 z" /></g></svg>
+	    </div>
+		</div></a>
+		</div>
+	</div>
+	
+	</div>
+
+	<div class="custom-hr"></div>
 	
 	<div id="port-contact">
 	
 		<div id="port-contact-col1">
-			<br/><br/><a name="sec-contact"></a><h1>Contact</h1>
+			<div id="port-top-spacer">
+			</div>
+			<h1>Contact</h1>
 		
-			<p>If you would like to get in contact with me, use this email link.</p>
-			<p>My resume is not online, but I may have emailed it to you if we have been in conversation. Please do check your attachments!
+			<p>If you would like to get in contact with me, use this e-mail link.</p>
+			<p><a href="mailto:dantarnowski@gmail.com">Send an e-mail</a>.</p>
+			<p>My resume is not online, but I may have e-mailed it to you if we have been in conversation. Please do check your attachments!
 		</div>
 		<div id="port-contact-col2">
 			<img src="graphics/window-solo.png" style="max-width:550px">
