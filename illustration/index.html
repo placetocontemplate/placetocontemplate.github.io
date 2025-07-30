@@ -23,7 +23,7 @@ body {
 }
 
 p {
-	margin: 0 0 17px 0;
+	margin: 0 0 10px 0;
 }
 
 :root {
@@ -45,9 +45,9 @@ h1 {
 }
 
 .illust-skills {
-	margin: 0;
+	margin: 0 0 0 25px;
 	padding: 0;
-	list-style-position: inside;
+	list-style-position: outside;
 	line-height: 37px;
 }
 
@@ -62,9 +62,10 @@ h1 {
 }
 
 #illust-header {
-	padding: 70px 0;
+	padding: 70px 0 55px;
 	color: #fff;
 	background: var(--header-color);
+	background: linear-gradient(0deg,rgba(167, 230, 144, 1) 0%, rgba(198, 230, 144, 1) 100%);
 	text-align: center;
 	font-size: 60px;
 	font-family: "Pacifico", cursive;
@@ -73,8 +74,15 @@ h1 {
 	line-height: 67px;
 }
 
-.box-shadow {
-	text-shadow: 3px 4px 0px rgba(0,0,0,0.27);
+.illust-title {
+	color: #646464;
+	text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.73);
+	font-size: 67px;
+}
+
+.illust-tagline {
+	width: 358px;
+	margin: 8px 0 0 0;
 }
 
 .my-images {
@@ -244,7 +252,8 @@ h1 {
 <body>
 
 <div id="illust-header">
-<p class="box-shadow">A Selection of Work</p>
+<p class="illust-title">A Selection of Work</p>
+<img src="graphics/name-tag.png" class="illust-tagline">
 </div>
 
 <div id="illust-container">
