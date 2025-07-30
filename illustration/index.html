@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Place to Contemplate ~ Illustrations</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Zilla Slab", serif;
+    font-weight: 400;
+    font-style: normal;
+	font-size: 23px;
+	line-height: 36px;
+	background: #f0f0f0;
+}
+
+:root {
+	--header-color: #a7e690;
+	--accent-color: #2e9d9d;
+}
+
+a:link, a:hover, a:visited, a:active {
+	 color: var(--accent-color);
+}
+
+h1 {
+	margin: 70px 0px 25px 0;
+	font-family: "Grandstander", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+	font-size: 38px;
+}
+
+.illust-skills {
+	margin: 0;
+	padding: 0;
+	list-style-position: inside;
+}
+
+#illust-container {
+	max-width: 900px;
+	margin: auto;
+	padding: 0 20px;
+}
+
+#illust-header {
+	padding: 20px 0;
+	color: #fff;
+	background: var(--header-color);
+	text-align: center;
+	font-size: 60px;
+	font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+	line-height: 67px;
+}
+
+.box-shadow {
+	text-shadow: 3px 4px 0px rgba(0,0,0,0.27);
+}
+
+.my-images {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 30px;
+	margin: auto;
+}
+
+#illust-samples {
+	max-width: 900px;
+	margin: auto;
+	padding: 0 20px;
+}
+
+#illust-thumb {
+	background: #fff;
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+	background-size: cover;
+	/* border: 4px solid var(--header-color); */
+	cursor: pointer;
+	transition: transform 350ms; /* Animation */
+}
+
+#illust-thumb-out {
+	overflow: hidden;
+	box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.39);
+	-webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.39);
+	-moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.39);	
+}
+
+#illust-thumb:hover {
+	 transform: scale(1.15);
+}
+
+#illust-mail {
+	  background: #2e9d9d;
+	  color: #fff;
+	  border-radius: 10px;
+	  padding: 13px 20px;
+	  text-decoration: none;
+	  font-size: 36px;
+	  font-weight: 600;
+}
+
+#illust-footer {
+	padding: 80px 0;
+	background: var(--header-color);
+	margin: 60px 0 0 0;
+}
+
+@media only screen and (max-width: 850px) {
+
+	.my-images {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 25px;
+		margin: auto;
+	}
+}
+
+
+
+</style>
+<style>
+
+.show-pop {
+	display: block !important;
+
+}
+
+@keyframes galpop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes galpop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.img-pop-hold {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 2000;
+  overflow: hidden;
+}
+
+.img-wrap {
+	height: 100%;
+	z-index: 40;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.img-wrap img {
+	z-index: 50;
+	max-height: 90%;
+	max-width: 90%;
+	align-self: center;
+	cursor: pointer;
+	/* margin: 2% 0 0 0; */
+	position: relative;
+	
+	opacity: 0;
+	animation: galpop linear forwards;
+	animation-duration: 800ms;
+	-webkit-animation: galpop linear forwards;
+	-webkit-animation-duration: 800ms;
+}
+
+.img-wrap-bg {
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	opacity: .95;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 30;
+}
+
+.img-gal-x {
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: 3%;
+	right: 2%;
+	z-index: 100;
+	background: #fff;
+	font-weight: bold;
+	border-radius: 50%;
+	line-height: 31px;
+	font-size: 25px;
+	font-family: arial;
+	cursor: pointer;
+	opacity: .70;
+	color: #000;
+}
+
+.img-gal-x:hover {
+	animation: closex linear forwards;
+	animation-duration: 300ms;
+	-webkit-animation: closex linear forwards;
+	-webkit-animation-duration: 300ms;
+}
+
+@keyframes closex {
+  from { opacity: .70; }
+  to { opacity: .9; }
+}
+
+@-webkit-keyframes closex {
+  from { opacity: .70; }
+  to { opacity: .9; }
+}
+
+</style>
+</head>
+<body>
+
+<div id="illust-header">
+<p class="box-shadow">A Selection of Work</p>
+</div>
+
+<div id="illust-container">
+
+	<div id="illust-intro">
+	<br/>
+	<h1>Let's look at some art!</h1>
+	Welcome to my illustration portfolio.<br/>Enjoy this selection of skills and samples!<br/>
+	<a href="mailto:dantarnowski@gmail.com">Send me an email</a>.
+
+
+
+	<h1>My skills</h1>
+	<ul class="illust-skills">
+		<li>Adobe Photoshop/Illustrator. GIMP. Inkscape.</li>
+		<li>Freehand drawing. Strong conceptual mindset.</li>
+		<li>Web design and graphic design (HTML/CSS/Adobe inDesign).</li>
+		<li>Print layout/design. Typography.</li>
+	</ul>
+	</div>
+
+
+</div>
+
+<div id="illust-samples">
+<br/><br/>
+	
+	<div class="my-images"></div>
+		
+</div>
+
+<div id="illust-container">
+<br/><br/><br/><a id="illust-mail" href="mailto:dantarnowski@gmail.com">Contact</a>
+</div>
+
+<br/>
+<div id="illust-footer"></div>
+
+</body>
+
+
+<script>
+
+var images = ["graphics/full-table.png", "graphics/tote.jpeg", "graphics/einstein.png", "graphics/poetry-header5.png", "graphics/inspiration.png", "graphics/2buttons.jpg", "graphics/grass.png", "graphics/window-solo.png", "graphics/bcc-case.jpg"];
+
+            
+for (var x = 0; x < images.length; x++) {
+
+	var less = x + 1;
+	
+	var popVar = 'img-pop' + less;
+    
+	var thePop = '<div class="img-pop-hold" id="' + popVar + '" onclick="myFunctionPop(' + less + ')"><div class="img-gal-x">x</div><div class="img-wrap"><img src="' + images[x] + '"></div><div class="img-wrap-bg"></div></div>';
+	
+    var theThumb = '<div id="illust-thumb-out"><div id="illust-thumb" style="background-image:url(' + images[x] + ')" onclick="myFunctionPop(' + less + ')"></div></div>' + thePop;
+	
+	document.querySelector('.my-images').innerHTML += theThumb;
+	
+}
+
+	function myFunctionPop(num) {
+	
+	    var popup = document.getElementById("img-pop" + num);
+		popup.classList.toggle("show-pop");
+		
+	}
+	
+
+</script>
+
+</html>
