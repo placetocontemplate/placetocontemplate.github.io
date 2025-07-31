@@ -84,6 +84,7 @@ h1 {
 	width: 358px;
 	margin: 8px 0 0 0;
 	max-width: 100%;
+	transform: rotate(-2deg);
 }
 
 .my-images {
@@ -114,6 +115,7 @@ h1 {
 	box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.39);
 	-webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.39);
 	-moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.39);	
+	border-radius: 10px;
 }
 
 #illust-thumb:hover {
@@ -304,7 +306,9 @@ h1 {
 
 <script>
 
-var images = ["graphics/full-table.png", "graphics/tote.jpeg", "graphics/einstein.png", "graphics/poetry-header5.png", "graphics/inspiration.png", "graphics/2buttons.jpg", "graphics/grass.png", "graphics/window-solo.png", "graphics/bcc-case.jpg"];
+var images = ["graphics/full-table2.png", "graphics/tote.jpeg", "graphics/einstein.png", "graphics/poetry-header5.png", "graphics/inspiration.png", "graphics/2buttons.jpg", "graphics/grass.png", "graphics/window-solo.png", "graphics/bcc-case.jpg", "graphics/her.png", "graphics/hipster-works.jpg", "graphics/armory.png"];
+
+var coords = ["", "", "-30", "", "-92", "", "", "", "", "", "", ""];
 
             
 for (var x = 0; x < images.length; x++) {
@@ -315,7 +319,7 @@ for (var x = 0; x < images.length; x++) {
     
 	var thePop = '<div class="img-pop-hold" id="' + popVar + '" onclick="myFunctionPop(' + less + ')"><div class="img-gal-x">x</div><div class="img-wrap"><img src="' + images[x] + '"></div><div class="img-wrap-bg"></div></div>';
 	
-    var theThumb = '<div id="illust-thumb-out"><div id="illust-thumb" style="background-image:url(' + images[x] + ')" onclick="myFunctionPop(' + less + ')"></div></div>' + thePop;
+    var theThumb = '<div id="illust-thumb-out"><div id="illust-thumb" style="background-image:url(' + images[x] + ');background-position:' + coords[x] + 'px;" onclick="myFunctionPop(' + less + ')"></div></div>' + thePop;
 	
 	document.querySelector('.my-images').innerHTML += theThumb;
 	
