@@ -16,43 +16,39 @@ body {
 	font-style: normal;
 }
 
-a:link, a:visited {
-	color: purple;
+a:link, a:active, a:visited {
+	color: #30b8d7;
 	transition: color 200ms ease-in-out;
-}
-
-a:hover {
-	color: #5ca667;
 }
 
 #moved-frame {
 		display: grid;
-		grid-template-columns: 2fr 1fr;
+		grid-template-columns: 52% 42%;
 		border: 0px solid #8a8a8a;
-		border-radius: 30px;
-		padding: 40px 50px 60px;
+		padding: 40px 30px 60px;
 		margin: 50px auto;
-		max-width: 860px;
-		gap: 50px;
-		background: #fff;
+		max-width: 1080px;
+		gap: 6%;
 		font-size: 30px;
 }
 
-#moved-frame p {
-	line-height: 43px;
-}
-
 h1 {
-	font-size: 52px;
+	font-size: 38px;
 	line-height: 42px;
-	margin: 0 0 50px 0;
+	margin: 0 0 33px 0;
 	font-weight: 500;
 	position: relative;
 }
 
+h2 {
+	margin: 0 0 8px 0;
+	font-weight: 500;
+	position: relative;
+	display: inline-block;
+}
+
 .head-underline {
-	height: 10px;
-	width: 92%;
+	height: 7px;
 	background: #c1e3c6;
 	margin: 3px 0 0 10px;
 	border-radius: 3px;
@@ -63,25 +59,23 @@ h1 {
 }
 
 #moved-lt-col {
-
-}
-
-#moved-rt-col {
 	display: flex;
 	align-items: center;
 }
 
-#rt-shade {
-	aspect-ratio: 1/1;
-	border-radius: 60px 0 60px 0;
-	border: 0px solid #c1e3c6;
+#moved-lt-col img {
+	width: 100%;
 }
 
-#add-logo {
-	display: none;
+#moved-rt-col {
+	padding: 20px 0 0;
+	font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+	line-height: clamp(2.3rem, 3vw, 2.8rem);
 }
 
-@media only screen and (max-width: 660px) {
+
+
+@media only screen and (max-width: 960px) {
 
 	h1 {
 		font-size: 28px;
@@ -90,7 +84,7 @@ h1 {
 	}
 	
 	.head-underline {
-		height: 8px;
+		height: 7px;
 		width: 100%;
 		background: #c1e3c6;
 		border-radius: 3px;
@@ -105,21 +99,11 @@ h1 {
 			text-align: center;
 			/* overflow-wrap: break-word !important; */
 	}
-	
-	#moved-frame p {
-		line-height: 33px;
-		font-size: 23px;
-	}
 
 	#moved-rt-col {
-		display: none;
+		padding: 0px;
 	}
 	
-	#add-logo {
-	display: block;
-	margin: 0 0 20px 0;
-	text-align: center;
-	}
 
 }
 
@@ -135,18 +119,17 @@ h1 {
 <div id="moved-frame">
 	<div id="moved-lt-col">
 	
-		<div id="add-logo">
-		<img src="graphics/ptc-logo.png" width="110">
-		</div>
+		<img src="graphics/skate-board-trans-cropped.png" style="max-width:600px;width:100%;margin:auto">
+
+	</div>
 	
-		<h1>Place to Contemplate<div class="head-underline"></div></h1>
-		<p>My portfolio has moved to <a href="http://www.placetocontemplate.com">placetocontemplate.com</a>.</p>
-	</div>
 	<div id="moved-rt-col">
-		<div id="rt-shade">
-		<img src="graphics/ptc-logo.png">
-		</div>
+		
+		<h2>Place to Contemplate<div class="head-underline"></div></h2>
+		<p>Visit my updated profile at <a href="http://www.placetocontemplate.com">placetocontemplate.com</a>.</p>
+		
 	</div>
+	
 </div>
 
 </body>
